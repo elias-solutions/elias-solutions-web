@@ -1,5 +1,9 @@
 {
   "tagline": "SOFTWARE & KI · SCHWEIZ",
+  "theme": {
+    "toLight": "Zu hellem Modus wechseln",
+    "toDark": "Zu dunklem Modus wechseln"
+  },
   "nav": {
     "start": "Start",
     "about": "Über uns",

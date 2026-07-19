@@ -36,17 +36,16 @@ html {
   --step-3: clamp(2.6rem, 1.8rem + 4vw, 5.4rem);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --paper: #0D0D0F; --paper-2: #151518; --ink: #F4F2EF; --muted: #9A948E;
-    --line: #262629; --line-strong: #F4F2EF; --red: #FF2233; --red-ink: #FF4757;
-  }
-}
+// Theme is switched manually via the toggle (data-theme on <html>), not by the
+// OS preference. Light is the default.
+:root,
 :root[data-theme='light'] {
+  color-scheme: light;
   --paper: #FFFFFF; --paper-2: #F6F4F1; --ink: #0A0A0A; --muted: #6E6A66;
   --line: #E6E3DF; --line-strong: #111111; --red: #E30613; --red-ink: #B8050F;
 }
 :root[data-theme='dark'] {
+  color-scheme: dark;
   --paper: #0D0D0F; --paper-2: #151518; --ink: #F4F2EF; --muted: #9A948E;
   --line: #262629; --line-strong: #F4F2EF; --red: #FF2233; --red-ink: #FF4757;
 }
@@ -64,7 +63,6 @@ body {
   font-family: var(--font);
   font-size: var(--step-0);
   line-height: 1.55;
-  color-scheme: light dark;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }

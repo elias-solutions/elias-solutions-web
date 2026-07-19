@@ -3,11 +3,12 @@ import { UpperCasePipe } from '@angular/common';
 
 import { LanguageService } from '../../i18n/language.service';
 import { AppLang } from '../../i18n/transloco.tokens';
+import { ThemeToggle } from '../theme-toggle/theme-toggle';
 
 @Component({
   selector: 'es-top-bar',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [UpperCasePipe],
+  imports: [UpperCasePipe, ThemeToggle],
   templateUrl: './top-bar.html',
   styleUrl: './top-bar.scss',
 })

@@ -1,5 +1,9 @@
 {
   "tagline": "LOGICIEL & IA · SUISSE",
+  "theme": {
+    "toLight": "Passer au mode clair",
+    "toDark": "Passer au mode sombre"
+  },
   "nav": {
     "start": "Accueil",
     "about": "À propos",

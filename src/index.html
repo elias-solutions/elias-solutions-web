@@ -8,6 +8,23 @@
   <meta name="description" content="Elias Solutions GmbH — Schweizer Software-Entwicklung für eGovernment, Versicherungen und Banken, und KI-Befähigung für KMU. Swiss Made, Hägendorf.">
   <meta name="theme-color" content="#E30613">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script>
+    // Apply the theme before first paint to avoid a flash. Use the saved
+    // choice if present, otherwise follow the OS preference on first visit.
+    (function () {
+      try {
+        var t = localStorage.getItem('es-theme');
+        if (t !== 'dark' && t !== 'light') {
+          t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+            ? 'dark'
+            : 'light';
+        }
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
 </head>
 <body>
   <app-root></app-root>

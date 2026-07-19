@@ -1,5 +1,9 @@
 {
   "tagline": "SOFTWARE & IA · SVIZZERA",
+  "theme": {
+    "toLight": "Passa alla modalità chiara",
+    "toDark": "Passa alla modalità scura"
+  },
   "nav": {
     "start": "Home",
     "about": "Chi siamo",

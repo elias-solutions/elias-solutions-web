@@ -1,5 +1,9 @@
 {
   "tagline": "SOFTWARE & AI · SWITZERLAND",
+  "theme": {
+    "toLight": "Switch to light mode",
+    "toDark": "Switch to dark mode"
+  },
   "nav": {
     "start": "Home",
     "about": "About",

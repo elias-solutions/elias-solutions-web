@@ -55,7 +55,8 @@ section {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 18px 40px;
+  justify-content: flex-end;
+  gap: 14px 28px;
   padding-block: 20px;
 }
 
@@ -73,7 +74,6 @@ section {
   display: flex;
   flex-wrap: wrap;
   gap: 8px 10px;
-  margin-left: auto;
 }
 
 /* ---------- Pillars ---------- */
