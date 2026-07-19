@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject, input, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, DestroyRef, inject, input, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { TranslocoDirective } from '@jsverse/transloco';
@@ -25,6 +25,12 @@ export class JobApplicationForm {
 
   protected readonly state = signal<SubmitState>('idle');
   protected readonly retryIn = signal(0);
+
+  private countdownId: ReturnType<typeof setInterval> | null = null;
+
+  constructor() {
+    inject(DestroyRef).onDestroy(() => this.stopCountdown());
+  }
 
   protected readonly limits = { email: 254, message: 5000 } as const;
 
@@ -53,8 +59,7 @@ export class JobApplicationForm {
 
     const wait = this.rateLimiter.remainingMs();
     if (wait > 0) {
-      this.retryIn.set(Math.ceil(wait / 1000));
-      this.state.set('throttled');
+      this.throttle(wait);
       return;
     }
 
@@ -72,6 +77,28 @@ export class JobApplicationForm {
       this.form.reset();
     } catch {
       this.state.set('error');
+    }
+  }
+
+  private throttle(remainingMs: number): void {
+    this.retryIn.set(Math.ceil(remainingMs / 1000));
+    this.state.set('throttled');
+    this.stopCountdown();
+    this.countdownId = setInterval(() => {
+      const remaining = this.rateLimiter.remainingMs();
+      if (remaining <= 0) {
+        this.stopCountdown();
+        this.state.set('idle');
+        return;
+      }
+      this.retryIn.set(Math.ceil(remaining / 1000));
+    }, 500);
+  }
+
+  private stopCountdown(): void {
+    if (this.countdownId !== null) {
+      clearInterval(this.countdownId);
+      this.countdownId = null;
     }
   }
 
