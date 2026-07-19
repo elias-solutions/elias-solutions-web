@@ -79,7 +79,20 @@
     "contact": {
       "title": "Contact",
       "lead": "Let's talk about your project.",
-      "body": "Whether you need support in software development or want to introduce AI into your company – we support you end to end: from data-protection-compliant use to efficient prompting that delivers precise results and responsible token consumption, optimising your cost-benefit ratio, all the way to a complete in-house analysis of your processes. Throughout, we keep compliance and data protection firmly in view – in line with the revised FADP (revDPA) in Switzerland and the GDPR in the EU. Get in touch with us."
+      "body": "Whether you need support in software development or want to introduce AI into your company – we support you end to end: from data-protection-compliant use to efficient prompting that delivers precise results and responsible token consumption, optimising your cost-benefit ratio, all the way to a complete in-house analysis of your processes. Throughout, we keep compliance and data protection firmly in view – in line with the revised FADP (revDPA) in Switzerland and the GDPR in the EU. Get in touch with us.",
+      "form": {
+        "name": "Name",
+        "email": "Email",
+        "company": "Company (optional)",
+        "message": "Your message",
+        "submit": "Send message",
+        "sending": "Sending …",
+        "success": "Thank you! Your message has been sent. We'll get back to you shortly.",
+        "error": "Your message could not be sent. Please try again or email contact@elias-solutions.ch.",
+        "close": "Close",
+        "required": "Required field",
+        "invalidEmail": "Please enter a valid email address."
+      }
     },
     "jobs": { "title": "Jobs", "lead": "Join Elias Solutions." },
     "legal": { "title": "Legal notice", "lead": "Information under Swiss law." }

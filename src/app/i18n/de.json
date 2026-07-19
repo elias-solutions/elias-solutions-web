@@ -79,7 +79,20 @@
     "contact": {
       "title": "Kontakt",
       "lead": "Sprechen wir über Ihr Projekt.",
-      "body": "Ob Sie Unterstützung in der Softwareentwicklung benötigen oder den Einstieg in die KI in Ihrem Unternehmen vollziehen möchten – wir begleiten Sie ganzheitlich: von der datenschutzkonformen Nutzung über effizientes Prompting, das zu präzisen Ergebnissen und einem verantwortungsvollen Token-Verbrauch führt und so Ihre Kosten-Nutzen-Bilanz optimiert, bis hin zur vollständigen Analyse Ihrer Prozesse inhouse. Dabei behalten wir Compliance und Datenschutz stets im Blick – konform mit dem revidierten DSG (revDSG) in der Schweiz und der DSGVO in der EU. Melden Sie sich bei uns."
+      "body": "Ob Sie Unterstützung in der Softwareentwicklung benötigen oder den Einstieg in die KI in Ihrem Unternehmen vollziehen möchten – wir begleiten Sie ganzheitlich: von der datenschutzkonformen Nutzung über effizientes Prompting, das zu präzisen Ergebnissen und einem verantwortungsvollen Token-Verbrauch führt und so Ihre Kosten-Nutzen-Bilanz optimiert, bis hin zur vollständigen Analyse Ihrer Prozesse inhouse. Dabei behalten wir Compliance und Datenschutz stets im Blick – konform mit dem revidierten DSG (revDSG) in der Schweiz und der DSGVO in der EU. Melden Sie sich bei uns.",
+      "form": {
+        "name": "Name",
+        "email": "E-Mail",
+        "company": "Unternehmen (optional)",
+        "message": "Ihre Nachricht",
+        "submit": "Nachricht senden",
+        "sending": "Wird gesendet …",
+        "success": "Vielen Dank! Ihre Nachricht wurde gesendet. Wir melden uns zeitnah bei Ihnen.",
+        "error": "Ihre Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder schreiben Sie an contact@elias-solutions.ch.",
+        "close": "Schliessen",
+        "required": "Pflichtfeld",
+        "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein."
+      }
     },
     "jobs": { "title": "Jobs", "lead": "Werden Sie Teil von Elias Solutions." },
     "legal": { "title": "Impressum", "lead": "Angaben gemäss schweizerischem Recht." }
