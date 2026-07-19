@@ -10,6 +10,7 @@
     "post": " e acconsento al trattamento dei miei dati.",
     "required": "Si prega di accettare l'informativa sulla privacy."
   },
+  "rateLimit": "Attendete {{seconds}} secondi prima di inviare di nuovo.",
   "nav": {
     "start": "Home",
     "about": "Chi siamo",

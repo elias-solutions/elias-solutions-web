@@ -10,6 +10,7 @@
     "post": " gelesen und stimme der Bearbeitung meiner Daten zu.",
     "required": "Bitte stimmen Sie der Datenschutzerklärung zu."
   },
+  "rateLimit": "Bitte warten Sie {{seconds}} Sekunden, bevor Sie erneut senden.",
   "nav": {
     "start": "Start",
     "about": "Über uns",

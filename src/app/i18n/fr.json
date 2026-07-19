@@ -10,6 +10,7 @@
     "post": " et j'accepte le traitement de mes données.",
     "required": "Veuillez accepter la politique de confidentialité."
   },
+  "rateLimit": "Veuillez patienter {{seconds}} secondes avant de renvoyer.",
   "nav": {
     "start": "Accueil",
     "about": "À propos",

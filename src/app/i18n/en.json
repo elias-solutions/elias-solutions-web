@@ -10,6 +10,7 @@
     "post": " and consent to the processing of my data.",
     "required": "Please accept the privacy policy."
   },
+  "rateLimit": "Please wait {{seconds}} seconds before sending again.",
   "nav": {
     "start": "Home",
     "about": "About",

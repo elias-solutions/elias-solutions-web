@@ -17,6 +17,15 @@ label {
   letter-spacing: 0.02em;
 }
 
+.count {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  margin-top: -2px;
+}
+
 input,
 textarea {
   font: inherit;
@@ -80,6 +89,14 @@ textarea.invalid {
 }
 .consent a { color: var(--ink); text-decoration: underline; }
 .consent a:hover { color: var(--red); }
+
+.hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
 
 button {
   justify-self: start;
