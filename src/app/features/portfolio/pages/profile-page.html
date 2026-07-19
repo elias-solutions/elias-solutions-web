@@ -1,0 +1,135 @@
+<section class="profile">
+  <header class="profile__header">
+    <h2>Profil</h2>
+    <p class="profile__subtitle">
+      Wähle ein Profil oder lege ein neues an. Erfasse pro Anlage Menge und Einstandskurs und
+      speichere. Das Dashboard nutzt das aktive Profil; die Angaben werden beim Start wieder geladen.
+    </p>
+  </header>
+
+  <div class="card profiles">
+    <label class="field profiles__select">
+      <span class="field__label">Aktives Profil</span>
+      <select [ngModel]="activeId()" (ngModelChange)="selectProfile($event)">
+        @for (profile of profiles(); track profile.id) {
+          <option [value]="profile.id">{{ profile.name }}</option>
+        }
+      </select>
+    </label>
+
+    <label class="field profiles__rename">
+      <span class="field__label">Name des aktiven Profils</span>
+      <div class="profiles__inline-row">
+        <input
+          type="text"
+          [ngModel]="renameValue()"
+          (ngModelChange)="renameValue.set($event)"
+          (keyup.enter)="canRename() && renameProfile()"
+        />
+        <button type="button" class="btn" [disabled]="!canRename()" (click)="renameProfile()">
+          Umbenennen
+        </button>
+      </div>
+    </label>
+
+    <label class="field profiles__new">
+      <span class="field__label">Neues Profil</span>
+      <div class="profiles__inline-row">
+        <input
+          type="text"
+          placeholder="Name, z. B. Langfristdepot"
+          [ngModel]="newName()"
+          (ngModelChange)="newName.set($event)"
+          (keyup.enter)="createProfile()"
+        />
+        <button type="button" class="btn" [disabled]="!newName().trim()" (click)="createProfile()">
+          Anlegen
+        </button>
+      </div>
+    </label>
+
+    <button
+      type="button"
+      class="btn btn--danger profiles__delete"
+      [disabled]="profiles().length <= 1"
+      (click)="removeActiveProfile()"
+    >
+      Profil löschen
+    </button>
+
+    <div class="profiles__transfer">
+      <button type="button" class="btn" (click)="exportProfiles()">Profile exportieren</button>
+      <button type="button" class="btn" (click)="fileInput.click()">Profile importieren</button>
+      <input
+        #fileInput
+        type="file"
+        accept="application/json,.json"
+        hidden
+        (change)="importProfiles(fileInput)"
+      />
+    </div>
+  </div>
+
+  @for (asset of assets; track asset.id) {
+    <fieldset class="card">
+      <legend>{{ asset.emblem }} {{ asset.name }}</legend>
+
+      <div class="grid">
+        <label class="field">
+          <span class="field__label">Gesamtmenge ({{ asset.unitLabel }})</span>
+          <input
+            type="number"
+            min="0"
+            step="0.0001"
+            inputmode="decimal"
+            [ngModel]="draft()[asset.id].amount"
+            (ngModelChange)="setAmount(asset.id, $event)"
+          />
+        </label>
+
+        <label class="field">
+          <span class="field__label">Einstandskurs pro {{ asset.unitLabel }}</span>
+          <input
+            type="number"
+            min="0"
+            step="1"
+            inputmode="decimal"
+            [ngModel]="draft()[asset.id].entryPrice"
+            (ngModelChange)="setEntryPrice(asset.id, $event)"
+          />
+        </label>
+
+        <label class="field">
+          <span class="field__label">Währung des Einstands</span>
+          <select
+            [ngModel]="draft()[asset.id].entryCurrency"
+            (ngModelChange)="setEntryCurrency(asset.id, $event)"
+          >
+            @for (code of currencies; track code) {
+              <option [value]="code">{{ currencyLabels[code] }}</option>
+            }
+          </select>
+        </label>
+      </div>
+    </fieldset>
+  }
+
+  <div class="actions">
+    <button type="button" class="btn btn--primary" [disabled]="!dirty()" (click)="save()">
+      Speichern
+    </button>
+    <button type="button" class="btn" [disabled]="!dirty()" (click)="reset()">
+      Zurücksetzen
+    </button>
+
+    @if (dirty()) {
+      <span class="actions__status actions__status--dirty">Nicht gespeicherte Änderungen</span>
+    } @else {
+      <span class="actions__status actions__status--saved">✓ Gespeichert</span>
+    }
+  </div>
+
+  <p class="profile__footnote">
+    <a routerLink="/portfolio">Zum Dashboard →</a>
+  </p>
+</section>

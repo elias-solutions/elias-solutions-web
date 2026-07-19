@@ -1,0 +1,140 @@
+:host {
+  display: block;
+  padding: 0 1rem;
+}
+
+.dashboard {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  &__header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--accent);
+  }
+
+  &__subtitle {
+    margin: 0.25rem 0 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+
+  &__footer {
+    color: var(--muted);
+    font-size: 0.8rem;
+    text-align: right;
+  }
+
+  &__stale {
+    color: var(--down);
+  }
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+
+  &--status {
+    text-align: center;
+    color: var(--muted);
+  }
+
+  &--error {
+    color: var(--down);
+    border-color: var(--down);
+  }
+
+  &--headline {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+
+    .value {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    &.up .value {
+      color: var(--up);
+    }
+
+    &.down .value {
+      color: var(--down);
+    }
+  }
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .value {
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+}
+
+.table-wrap {
+  overflow-x: auto;
+  padding: 0.5rem;
+}
+
+.ledger {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+
+  th,
+  td {
+    padding: 0.7rem 0.9rem;
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  thead th {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--muted);
+    border-bottom: 1px solid var(--border);
+  }
+
+  thead th:first-child,
+  tbody th {
+    text-align: left;
+  }
+
+  tbody th {
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  tbody tr + tr th,
+  tbody tr + tr td {
+    border-top: 1px solid var(--border);
+  }
+
+  .up {
+    color: var(--up);
+  }
+
+  .down {
+    color: var(--down);
+  }
+}
+
+.label {
+  font-size: 0.8rem;
+  color: var(--muted);
+}

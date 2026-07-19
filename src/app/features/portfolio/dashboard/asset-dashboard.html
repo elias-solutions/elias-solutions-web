@@ -1,0 +1,75 @@
+<section class="dashboard">
+  <header class="dashboard__header">
+    <h2>{{ asset().emblem }} {{ asset().name }}</h2>
+    <p class="dashboard__subtitle">Live-Kurs von CoinGecko · Aktualisierung alle 30&nbsp;Sekunden</p>
+  </header>
+
+  @if (hasData()) {
+    <div class="card summary">
+      <div class="summary__item">
+        <span class="label">Bestand</span>
+        <span class="value">{{ holding().amount | number: '1.0-8' }} {{ asset().unitLabel }}</span>
+      </div>
+      <div class="summary__item">
+        <span class="label">Einstand pro {{ asset().unitLabel }}</span>
+        <span class="value">
+          {{ holding().entryPrice | number: '1.2-2' }} {{ currencySymbols[holding().entryCurrency] }}
+        </span>
+      </div>
+    </div>
+  } @else {
+    <div class="card card--status">
+      Noch keine Angaben. Bitte im <strong>Profil</strong> Menge und Einstandskurs erfassen.
+    </div>
+  }
+
+  @if (loading()) {
+    <div class="card card--status">Kurs wird geladen…</div>
+  } @else if (result(); as r) {
+    <div class="card card--headline" [class.up]="r.profitPercent >= 0" [class.down]="r.profitPercent < 0">
+      <span class="label">Rendite</span>
+      <span class="value">
+        {{ r.profitPercent >= 0 ? '+' : '' }}{{ r.profitPercent | number: '1.2-2' }} %
+      </span>
+    </div>
+
+    <div class="card table-wrap">
+      <table class="ledger">
+        <thead>
+          <tr>
+            <th scope="col">Währung</th>
+            <th scope="col">Einstand / {{ asset().unitLabel }}</th>
+            <th scope="col">Kurs / {{ asset().unitLabel }}</th>
+            <th scope="col">Aktueller Wert</th>
+            <th scope="col">Gewinn / Verlust</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (code of currencies; track code) {
+            <tr>
+              <th scope="row">{{ currencyLabels[code] }}</th>
+              <td>{{ r.byCurrency[code].costPerUnit | number: '1.2-2' }} {{ currencySymbols[code] }}</td>
+              <td>{{ r.byCurrency[code].currentPrice | number: '1.2-2' }} {{ currencySymbols[code] }}</td>
+              <td>{{ r.byCurrency[code].currentValue | number: '1.2-2' }} {{ currencySymbols[code] }}</td>
+              <td [class.up]="r.byCurrency[code].profit >= 0" [class.down]="r.byCurrency[code].profit < 0">
+                {{ r.byCurrency[code].profit >= 0 ? '+' : '' }}{{ r.byCurrency[code].profit | number: '1.2-2' }}
+                {{ currencySymbols[code] }}
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+
+    <footer class="dashboard__footer">
+      @if (updatedAt(); as ts) {
+        Zuletzt aktualisiert: {{ ts | date: 'HH:mm:ss' }}
+      }
+      @if (error()) {
+        <span class="dashboard__stale">· letzte Aktualisierung fehlgeschlagen</span>
+      }
+    </footer>
+  } @else if (error()) {
+    <div class="card card--status card--error">⚠ {{ error() }}</div>
+  }
+</section>

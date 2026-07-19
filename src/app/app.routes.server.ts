@@ -8,6 +8,15 @@ export const serverRoutes: ServerRoute[] = [
     renderMode: RenderMode.Prerender,
     getPrerenderParams: async () => JOB_KEYS.map((key) => ({ key })),
   },
+  // The embedded dashboard polls live prices — render it on the client only.
+  {
+    path: 'portfolio',
+    renderMode: RenderMode.Client,
+  },
+  {
+    path: 'portfolio/**',
+    renderMode: RenderMode.Client,
+  },
   {
     path: '**',
     renderMode: RenderMode.Prerender,
