@@ -31,5 +31,10 @@ export const routes: Routes = [
     loadComponent: () => import('./features/impressum/impressum').then((m) => m.Impressum),
     title: 'Impressum — Elias Solutions GmbH',
   },
+  {
+    path: 'datenschutz',
+    loadComponent: () => import('./features/privacy/privacy').then((m) => m.Privacy),
+    title: 'Datenschutz — Elias Solutions GmbH',
+  },
   { path: '**', redirectTo: '' },
 ];

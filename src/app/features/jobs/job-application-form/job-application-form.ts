@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, inject, input, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 import { TranslocoDirective } from '@jsverse/transloco';
 
 import { JOB_APPLICATION_SENDER } from '../../../core/jobs/job-application-sender';
@@ -9,7 +10,7 @@ type SubmitState = 'idle' | 'sending' | 'sent' | 'error';
 @Component({
   selector: 'es-job-application-form',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [ReactiveFormsModule, TranslocoDirective],
+  imports: [ReactiveFormsModule, RouterLink, TranslocoDirective],
   templateUrl: './job-application-form.html',
   styleUrl: './job-application-form.scss',
 })
@@ -25,6 +26,7 @@ export class JobApplicationForm {
   protected readonly form = this.fb.nonNullable.group({
     email: ['', [Validators.required, Validators.email]],
     message: ['', [Validators.required]],
+    consent: [false, [Validators.requiredTrue]],
   });
 
   protected async submit(): Promise<void> {
@@ -35,7 +37,8 @@ export class JobApplicationForm {
 
     this.state.set('sending');
     try {
-      await this.sender.send({ role: this.role(), roleKey: this.roleKey(), ...this.form.getRawValue() });
+      const { consent, ...fields } = this.form.getRawValue();
+      await this.sender.send({ role: this.role(), roleKey: this.roleKey(), ...fields });
       this.state.set('sent');
       this.form.reset();
     } catch {
@@ -45,6 +48,11 @@ export class JobApplicationForm {
 
   protected showError(control: 'email' | 'message'): boolean {
     const c = this.form.controls[control];
+    return c.invalid && (c.touched || c.dirty);
+  }
+
+  protected showConsentError(): boolean {
+    const c = this.form.controls.consent;
     return c.invalid && (c.touched || c.dirty);
   }
 

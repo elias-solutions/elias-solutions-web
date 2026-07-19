@@ -16,6 +16,7 @@ import { CONTACT_SENDER } from './core/contact/contact-sender';
 import { EmailjsContactSender } from './core/contact/emailjs-contact-sender';
 import { JOB_APPLICATION_SENDER } from './core/jobs/job-application-sender';
 import { EmailjsJobApplicationSender } from './core/jobs/emailjs-job-application-sender';
+import { provideServiceWorker } from '@angular/service-worker';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -40,5 +41,9 @@ export const appConfig: ApplicationConfig = {
     }),
     { provide: CONTACT_SENDER, useClass: EmailjsContactSender },
     { provide: JOB_APPLICATION_SENDER, useClass: EmailjsJobApplicationSender },
+    provideServiceWorker('ngsw-worker.js', {
+      enabled: !isDevMode(),
+      registrationStrategy: 'registerWhenStable:30000',
+    }),
   ],
 };

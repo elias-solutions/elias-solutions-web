@@ -58,5 +58,25 @@ textarea.invalid {
 
 .failure { color: var(--red); }
 
+.consent .check {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  align-items: start;
+  cursor: pointer;
+  font-size: var(--step--1);
+  line-height: 1.45;
+  color: var(--muted);
+}
+.consent input {
+  width: 18px;
+  height: 18px;
+  margin-top: 1px;
+  accent-color: var(--red);
+  cursor: pointer;
+}
+.consent a { color: var(--ink); text-decoration: underline; }
+.consent a:hover { color: var(--red); }
+
 button { justify-self: start; }
 button[disabled] { opacity: 0.6; cursor: default; }

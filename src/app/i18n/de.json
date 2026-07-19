@@ -4,12 +4,19 @@
     "toLight": "Zu hellem Modus wechseln",
     "toDark": "Zu dunklem Modus wechseln"
   },
+  "consent": {
+    "pre": "Ich habe die ",
+    "linkText": "Datenschutzerklärung",
+    "post": " gelesen und stimme der Bearbeitung meiner Daten zu.",
+    "required": "Bitte stimmen Sie der Datenschutzerklärung zu."
+  },
   "nav": {
     "start": "Start",
     "about": "Über uns",
     "jobs": "Jobs",
     "contact": "Kontakt",
-    "legal": "Impressum"
+    "legal": "Impressum",
+    "privacy": "Datenschutz"
   },
   "hero": {
     "eyebrow": "Schweizer Software- & KI-Kompetenz · Hägendorf",
@@ -143,9 +150,9 @@
     ]
   },
   "brand": {
-    "label": "Markenzeichen · Vorschlag",
+    "label": "Markenzeichen",
     "title": "Ein modulares Schweizerkreuz.",
-    "note": "Das Kreuz steht für Schweizer Vertrauen und für das «Plus» der Befähigung; das 3×3-Raster verweist auf Software und das Schweizer Gestaltungsraster. Funktioniert auf Weiss, Rot und Schwarz.",
+    "note": "Unser Markenzeichen vereint Schweizer Herkunft und digitale Kompetenz in einem Zeichen. Das Kreuz steht für Vertrauen, Präzision und Verlässlichkeit – das «Plus» seiner Form für unseren Anspruch, echten Mehrwert zu schaffen und Menschen wie Unternehmen zu befähigen. Das modulare 3×3-Raster verweist auf Software und das Schweizer Gestaltungsraster: klar, strukturiert und auf das Wesentliche reduziert – in Rot, Weiss und Schwarz.",
     "onWhite": "Primär auf Weiss",
     "onRed": "Invers auf Rot",
     "onBlack": "Auf Schwarz"
@@ -203,6 +210,48 @@
       "copyright": "Die Urheber- und alle anderen Rechte an Inhalten, Bildern, Fotos oder anderen Dateien auf dieser Website gehören ausschliesslich der Elias Solutions GmbH oder den speziell genannten Rechtsinhabern. Für die Reproduktion jeglicher Elemente ist die schriftliche Zustimmung der Urheberrechtsträger im Voraus einzuholen.",
       "dataProtectionTitle": "Datenschutz",
       "dataProtection": "Wir behandeln Ihre Personendaten vertraulich und entsprechend dem revidierten schweizerischen Datenschutzgesetz (revDSG) sowie der Datenschutz-Grundverordnung (DSGVO). Über das Kontaktformular übermittelte Daten verwenden wir ausschliesslich zur Bearbeitung Ihrer Anfrage."
+    },
+    "privacy": {
+      "title": "Datenschutzerklärung",
+      "lead": "Der Schutz Ihrer Personendaten ist uns wichtig. Nachfolgend informieren wir Sie über die Bearbeitung Ihrer Daten gemäss dem revidierten schweizerischen Datenschutzgesetz (revDSG) und, soweit anwendbar, der EU-Datenschutz-Grundverordnung (DSGVO).",
+      "sections": [
+        {
+          "heading": "Verantwortliche Stelle",
+          "body": "Verantwortlich für die Datenbearbeitung ist die Elias Solutions GmbH, Solothurnerstrasse 2, 4614 Hägendorf, Schweiz. Bei Fragen zum Datenschutz erreichen Sie uns unter contact@elias-solutions.ch."
+        },
+        {
+          "heading": "Welche Daten wir bearbeiten",
+          "body": "Beim Besuch unserer Website werden technisch notwendige Daten (z. B. IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Seiten) durch unseren Hosting-Provider verarbeitet. Wenn Sie unser Kontakt- oder Bewerbungsformular nutzen, bearbeiten wir die von Ihnen angegebenen Daten (Name, E-Mail-Adresse, Unternehmen sowie Ihre Nachricht bzw. bei Bewerbungen die gewählte Stelle und Ihre Beschreibung)."
+        },
+        {
+          "heading": "Kontakt- und Bewerbungsformular",
+          "body": "Für den Versand der über die Formulare übermittelten Nachrichten setzen wir den Dienst EmailJS (EmailJS, USA) als Auftragsbearbeiter ein. Dabei werden die von Ihnen eingegebenen Daten an Server von EmailJS übermittelt und können in den USA bearbeitet werden. Wir verwenden diese Daten ausschliesslich zur Bearbeitung Ihrer Anfrage bzw. Bewerbung. Rechtsgrundlage ist Ihre Einwilligung sowie unser berechtigtes Interesse an der Kommunikation mit Interessentinnen, Interessenten und Bewerbenden."
+        },
+        {
+          "heading": "Hosting",
+          "body": "Unsere Website wird bei einem Hosting-Dienstleister betrieben, der die Daten in unserem Auftrag bearbeitet. Zur Gewährleistung eines sicheren und stabilen Betriebs werden Server-Logdateien erstellt."
+        },
+        {
+          "heading": "Cookies und lokale Speicherung",
+          "body": "Wir setzen keine Tracking-Cookies ein. Für die Funktionalität der Website speichern wir Ihre Sprach- und Darstellungseinstellung (hell/dunkel) lokal in Ihrem Browser (localStorage). Diese Daten verbleiben auf Ihrem Gerät und werden nicht an uns übermittelt."
+        },
+        {
+          "heading": "Weitergabe an Dritte",
+          "body": "Eine Weitergabe Ihrer Daten erfolgt nur an die zur Leistungserbringung eingesetzten Auftragsbearbeiter (z. B. Hosting, EmailJS) oder wenn wir gesetzlich dazu verpflichtet sind. Ein Verkauf Ihrer Daten findet nicht statt."
+        },
+        {
+          "heading": "Aufbewahrung",
+          "body": "Wir bewahren Ihre Daten nur so lange auf, wie es für die genannten Zwecke oder aufgrund gesetzlicher Aufbewahrungspflichten erforderlich ist. Bewerbungsunterlagen werden nach Abschluss des Bewerbungsprozesses gelöscht, sofern Sie keiner längeren Aufbewahrung zugestimmt haben."
+        },
+        {
+          "heading": "Ihre Rechte",
+          "body": "Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Bearbeitung Ihrer Personendaten sowie auf Datenübertragbarkeit und Widerspruch. Erteilte Einwilligungen können Sie jederzeit widerrufen. Wenden Sie sich dazu an contact@elias-solutions.ch. Zudem steht Ihnen ein Beschwerderecht bei der zuständigen Datenschutzbehörde zu (in der Schweiz der EDÖB)."
+        },
+        {
+          "heading": "Änderungen",
+          "body": "Wir können diese Datenschutzerklärung anpassen, um sie an geänderte Rechtslagen oder Änderungen unserer Dienste anzupassen. Es gilt die jeweils aktuelle, auf dieser Website veröffentlichte Fassung."
+        }
+      ]
     }
   }
 }

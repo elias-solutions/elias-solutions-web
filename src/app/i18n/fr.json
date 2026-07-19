@@ -4,12 +4,19 @@
     "toLight": "Passer au mode clair",
     "toDark": "Passer au mode sombre"
   },
+  "consent": {
+    "pre": "J'ai lu la ",
+    "linkText": "politique de confidentialité",
+    "post": " et j'accepte le traitement de mes données.",
+    "required": "Veuillez accepter la politique de confidentialité."
+  },
   "nav": {
     "start": "Accueil",
     "about": "À propos",
     "jobs": "Emplois",
     "contact": "Contact",
-    "legal": "Mentions légales"
+    "legal": "Mentions légales",
+    "privacy": "Confidentialité"
   },
   "hero": {
     "eyebrow": "Expertise suisse en logiciel & IA · Hägendorf",
@@ -143,9 +150,9 @@
     ]
   },
   "brand": {
-    "label": "Logo · Proposition",
+    "label": "Marque",
     "title": "Une croix suisse modulaire.",
-    "note": "La croix incarne la confiance suisse et le « plus » de la montée en compétences ; la grille 3×3 évoque le logiciel et la grille graphique suisse. Fonctionne sur blanc, rouge et noir.",
+    "note": "Notre marque réunit en un seul signe l'origine suisse et la compétence numérique. La croix incarne la confiance, la précision et la fiabilité – le « plus » de sa forme exprime notre ambition de créer une réelle valeur ajoutée et de rendre les personnes comme les entreprises plus autonomes. La grille modulaire 3×3 évoque le logiciel et la grille graphique suisse : claire, structurée et réduite à l'essentiel – en rouge, blanc et noir.",
     "onWhite": "Primaire sur blanc",
     "onRed": "Inversé sur rouge",
     "onBlack": "Sur noir"
@@ -203,6 +210,48 @@
       "copyright": "Les droits d'auteur et tous les autres droits relatifs aux contenus, images, photos ou autres fichiers de ce site appartiennent exclusivement à Elias Solutions GmbH ou aux titulaires de droits spécifiquement mentionnés. Toute reproduction requiert l'accord écrit préalable des titulaires des droits d'auteur.",
       "dataProtectionTitle": "Protection des données",
       "dataProtection": "Nous traitons vos données personnelles de manière confidentielle et conformément à la loi suisse révisée sur la protection des données (nLPD) ainsi qu'au règlement général sur la protection des données (RGPD). Les données transmises via le formulaire de contact sont utilisées exclusivement pour traiter votre demande."
+    },
+    "privacy": {
+      "title": "Politique de confidentialité",
+      "lead": "La protection de vos données personnelles nous tient à cœur. Nous vous informons ci-après du traitement de vos données conformément à la loi suisse révisée sur la protection des données (nLPD) et, le cas échéant, au règlement général sur la protection des données (RGPD) de l'UE.",
+      "sections": [
+        {
+          "heading": "Responsable du traitement",
+          "body": "Le responsable du traitement des données est Elias Solutions GmbH, Solothurnerstrasse 2, 4614 Hägendorf, Suisse. Pour toute question relative à la protection des données, vous pouvez nous contacter à contact@elias-solutions.ch."
+        },
+        {
+          "heading": "Quelles données nous traitons",
+          "body": "Lors de la visite de notre site, des données techniquement nécessaires (p. ex. adresse IP, date et heure de l'accès, pages consultées) sont traitées par notre hébergeur. Lorsque vous utilisez notre formulaire de contact ou de candidature, nous traitons les données que vous indiquez (nom, adresse e-mail, entreprise ainsi que votre message ou, pour les candidatures, le poste choisi et votre description)."
+        },
+        {
+          "heading": "Formulaire de contact et de candidature",
+          "body": "Pour l'envoi des messages transmis via les formulaires, nous faisons appel au service EmailJS (EmailJS, États-Unis) en tant que sous-traitant. Les données que vous saisissez sont transmises aux serveurs d'EmailJS et peuvent être traitées aux États-Unis. Nous utilisons ces données exclusivement pour traiter votre demande ou votre candidature. La base juridique est votre consentement ainsi que notre intérêt légitime à communiquer avec les personnes intéressées et les candidats."
+        },
+        {
+          "heading": "Hébergement",
+          "body": "Notre site est exploité chez un prestataire d'hébergement qui traite les données pour notre compte. Des fichiers journaux du serveur sont créés afin de garantir un fonctionnement sûr et stable."
+        },
+        {
+          "heading": "Cookies et stockage local",
+          "body": "Nous n'utilisons pas de cookies de suivi. Pour le fonctionnement du site, nous enregistrons votre préférence de langue et d'affichage (clair/sombre) localement dans votre navigateur (localStorage). Ces données restent sur votre appareil et ne nous sont pas transmises."
+        },
+        {
+          "heading": "Transmission à des tiers",
+          "body": "Vos données ne sont transmises qu'aux sous-traitants mandatés pour la fourniture des prestations (p. ex. hébergement, EmailJS) ou lorsque nous y sommes légalement tenus. Vos données ne sont pas vendues."
+        },
+        {
+          "heading": "Conservation",
+          "body": "Nous ne conservons vos données que le temps nécessaire aux finalités indiquées ou en raison d'obligations légales de conservation. Les dossiers de candidature sont supprimés à l'issue du processus de recrutement, sauf si vous avez consenti à une conservation plus longue."
+        },
+        {
+          "heading": "Vos droits",
+          "body": "Vous avez le droit d'accès, de rectification, d'effacement et de limitation du traitement de vos données personnelles, ainsi qu'un droit à la portabilité et d'opposition. Vous pouvez révoquer à tout moment les consentements donnés. Pour cela, adressez-vous à contact@elias-solutions.ch. Vous disposez en outre d'un droit de réclamation auprès de l'autorité de protection des données compétente (en Suisse, le PFPDT)."
+        },
+        {
+          "heading": "Modifications",
+          "body": "Nous pouvons adapter la présente politique de confidentialité afin de tenir compte de l'évolution du cadre juridique ou de nos services. La version actuelle publiée sur ce site fait foi."
+        }
+      ]
     }
   }
 }

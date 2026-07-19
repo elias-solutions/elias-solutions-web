@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 import { TranslocoDirective } from '@jsverse/transloco';
 
 import { CONTACT_SENDER } from '../../../core/contact/contact-sender';
@@ -9,7 +10,7 @@ type SubmitState = 'idle' | 'sending' | 'sent' | 'error';
 @Component({
   selector: 'es-contact-form',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [ReactiveFormsModule, TranslocoDirective],
+  imports: [ReactiveFormsModule, RouterLink, TranslocoDirective],
   templateUrl: './contact-form.html',
   styleUrl: './contact-form.scss',
 })
@@ -24,6 +25,7 @@ export class ContactForm {
     email: ['', [Validators.required, Validators.email]],
     company: [''],
     message: ['', [Validators.required]],
+    consent: [false, [Validators.requiredTrue]],
   });
 
   protected async submit(): Promise<void> {
@@ -34,7 +36,8 @@ export class ContactForm {
 
     this.state.set('sending');
     try {
-      await this.sender.send(this.form.getRawValue());
+      const { consent, ...message } = this.form.getRawValue();
+      await this.sender.send(message);
       this.state.set('sent');
       this.form.reset();
     } catch {
@@ -44,6 +47,11 @@ export class ContactForm {
 
   protected showError(control: 'name' | 'email' | 'message'): boolean {
     const c = this.form.controls[control];
+    return c.invalid && (c.touched || c.dirty);
+  }
+
+  protected showConsentError(): boolean {
+    const c = this.form.controls.consent;
     return c.invalid && (c.touched || c.dirty);
   }
 

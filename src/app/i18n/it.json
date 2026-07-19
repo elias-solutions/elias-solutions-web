@@ -4,12 +4,19 @@
     "toLight": "Passa alla modalità chiara",
     "toDark": "Passa alla modalità scura"
   },
+  "consent": {
+    "pre": "Ho letto l'",
+    "linkText": "informativa sulla privacy",
+    "post": " e acconsento al trattamento dei miei dati.",
+    "required": "Si prega di accettare l'informativa sulla privacy."
+  },
   "nav": {
     "start": "Home",
     "about": "Chi siamo",
     "jobs": "Lavoro",
     "contact": "Contatto",
-    "legal": "Note legali"
+    "legal": "Note legali",
+    "privacy": "Privacy"
   },
   "hero": {
     "eyebrow": "Competenza svizzera in software & IA · Hägendorf",
@@ -143,9 +150,9 @@
     ]
   },
   "brand": {
-    "label": "Marchio · Proposta",
+    "label": "Marchio",
     "title": "Una croce svizzera modulare.",
-    "note": "La croce rappresenta la fiducia svizzera e il «più» dell'empowerment; la griglia 3×3 richiama il software e la griglia grafica svizzera. Funziona su bianco, rosso e nero.",
+    "note": "Il nostro marchio unisce in un unico segno l'origine svizzera e la competenza digitale. La croce rappresenta fiducia, precisione e affidabilità – il «più» della sua forma esprime la nostra ambizione di creare un valore concreto e di rendere autonome le persone e le aziende. La griglia modulare 3×3 richiama il software e la griglia grafica svizzera: chiara, strutturata e ridotta all'essenziale – in rosso, bianco e nero.",
     "onWhite": "Primario su bianco",
     "onRed": "Invertito su rosso",
     "onBlack": "Su nero"
@@ -203,6 +210,48 @@
       "copyright": "I diritti d'autore e tutti gli altri diritti relativi a contenuti, immagini, foto o altri file di questo sito appartengono esclusivamente a Elias Solutions GmbH o ai titolari dei diritti espressamente menzionati. Per la riproduzione di qualsiasi elemento è necessario ottenere in anticipo il consenso scritto dei titolari dei diritti d'autore.",
       "dataProtectionTitle": "Protezione dei dati",
       "dataProtection": "Trattiamo i vostri dati personali in modo confidenziale e in conformità con la legge svizzera riveduta sulla protezione dei dati (nLPD) e con il regolamento generale sulla protezione dei dati (GDPR). I dati trasmessi tramite il modulo di contatto vengono utilizzati esclusivamente per elaborare la vostra richiesta."
+    },
+    "privacy": {
+      "title": "Informativa sulla protezione dei dati",
+      "lead": "La protezione dei vostri dati personali è importante per noi. Di seguito vi informiamo sul trattamento dei vostri dati ai sensi della legge svizzera riveduta sulla protezione dei dati (nLPD) e, ove applicabile, del regolamento generale sulla protezione dei dati (GDPR) dell'UE.",
+      "sections": [
+        {
+          "heading": "Titolare del trattamento",
+          "body": "Il titolare del trattamento dei dati è Elias Solutions GmbH, Solothurnerstrasse 2, 4614 Hägendorf, Svizzera. Per domande sulla protezione dei dati potete contattarci all'indirizzo contact@elias-solutions.ch."
+        },
+        {
+          "heading": "Quali dati trattiamo",
+          "body": "Durante la visita del nostro sito, il nostro provider di hosting tratta dati tecnicamente necessari (ad es. indirizzo IP, data e ora dell'accesso, pagine visitate). Quando utilizzate il nostro modulo di contatto o di candidatura, trattiamo i dati che indicate (nome, indirizzo e-mail, azienda nonché il vostro messaggio o, per le candidature, la posizione scelta e la vostra descrizione)."
+        },
+        {
+          "heading": "Modulo di contatto e di candidatura",
+          "body": "Per l'invio dei messaggi trasmessi tramite i moduli ci avvaliamo del servizio EmailJS (EmailJS, USA) in qualità di responsabile del trattamento. I dati da voi inseriti vengono trasmessi ai server di EmailJS e possono essere trattati negli USA. Utilizziamo questi dati esclusivamente per elaborare la vostra richiesta o candidatura. La base giuridica è il vostro consenso nonché il nostro legittimo interesse a comunicare con persone interessate e candidati."
+        },
+        {
+          "heading": "Hosting",
+          "body": "Il nostro sito è gestito presso un fornitore di hosting che tratta i dati per nostro conto. Per garantire un funzionamento sicuro e stabile vengono creati file di log del server."
+        },
+        {
+          "heading": "Cookie e memorizzazione locale",
+          "body": "Non utilizziamo cookie di tracciamento. Per la funzionalità del sito memorizziamo la vostra preferenza di lingua e di visualizzazione (chiaro/scuro) localmente nel vostro browser (localStorage). Questi dati rimangono sul vostro dispositivo e non ci vengono trasmessi."
+        },
+        {
+          "heading": "Comunicazione a terzi",
+          "body": "I vostri dati vengono comunicati solo ai responsabili del trattamento incaricati della fornitura dei servizi (ad es. hosting, EmailJS) o se siamo tenuti per legge a farlo. I vostri dati non vengono venduti."
+        },
+        {
+          "heading": "Conservazione",
+          "body": "Conserviamo i vostri dati solo per il tempo necessario alle finalità indicate o in base agli obblighi legali di conservazione. La documentazione di candidatura viene cancellata al termine del processo di selezione, salvo che abbiate acconsentito a una conservazione più lunga."
+        },
+        {
+          "heading": "I vostri diritti",
+          "body": "Avete il diritto di accesso, rettifica, cancellazione e limitazione del trattamento dei vostri dati personali, nonché il diritto alla portabilità e di opposizione. Potete revocare in qualsiasi momento i consensi prestati. A tal fine, rivolgetevi a contact@elias-solutions.ch. Avete inoltre il diritto di presentare reclamo all'autorità competente per la protezione dei dati (in Svizzera l'IFPDT)."
+        },
+        {
+          "heading": "Modifiche",
+          "body": "Possiamo adattare la presente informativa sulla protezione dei dati per tenere conto di modifiche del quadro giuridico o dei nostri servizi. Fa fede la versione attuale pubblicata su questo sito."
+        }
+      ]
     }
   }
 }

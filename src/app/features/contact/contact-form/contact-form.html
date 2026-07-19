@@ -54,6 +54,17 @@
     }
   </div>
 
+  <div class="field consent">
+    <label class="check">
+      <input type="checkbox" formControlName="consent" />
+      <span>{{ t('consent.pre')
+        }}<a routerLink="/datenschutz" target="_blank" rel="noopener">{{ t('consent.linkText') }}</a>{{ t('consent.post') }}</span>
+    </label>
+    @if (showConsentError()) {
+      <span class="error">{{ t('consent.required') }}</span>
+    }
+  </div>
+
   <button type="submit" class="btn solid" [disabled]="state() === 'sending'">
     {{ state() === 'sending' ? t('pages.contact.form.sending') : t('pages.contact.form.submit') }}
   </button>
