@@ -56,18 +56,6 @@
     >
       Profil löschen
     </button>
-
-    <div class="profiles__transfer">
-      <button type="button" class="btn" (click)="exportProfiles()">Profile exportieren</button>
-      <button type="button" class="btn" (click)="fileInput.click()">Profile importieren</button>
-      <input
-        #fileInput
-        type="file"
-        accept="application/json,.json"
-        hidden
-        (change)="importProfiles(fileInput)"
-      />
-    </div>
   </div>
 
   @for (asset of assets; track asset.id) {

@@ -69,29 +69,6 @@ export class ProfilePage {
     this.profile.saveHoldings(this.activeId(), this.draft());
   }
 
-  exportProfiles(): void {
-    const blob = new Blob([this.profile.exportState()], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = 'portfolio-profile.json';
-    link.click();
-    URL.revokeObjectURL(url);
-  }
-
-  importProfiles(input: HTMLInputElement): void {
-    const file = input.files?.[0];
-    if (!file) {
-      return;
-    }
-    void file.text().then((text) => {
-      if (this.profile.importState(text)) {
-        this.loadActive();
-      }
-      input.value = '';
-    });
-  }
-
   reset(): void {
     this.draft.set(this.seedDraft());
   }

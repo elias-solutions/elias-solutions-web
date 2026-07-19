@@ -81,29 +81,6 @@ export class ProfileService {
     }));
   }
 
-  /** Serialises all profiles for backup or transfer between apps. */
-  exportState(): string {
-    return JSON.stringify(this.state(), null, 2);
-  }
-
-  /** Replaces all profiles from previously exported JSON. Returns false on invalid input. */
-  importState(json: string): boolean {
-    try {
-      const parsed = JSON.parse(json) as ProfilesState;
-      if (!parsed || !Array.isArray(parsed.profiles) || parsed.profiles.length === 0) {
-        return false;
-      }
-      const activeId = parsed.profiles.some((profile) => profile.id === parsed.activeId)
-        ? parsed.activeId
-        : parsed.profiles[0].id;
-      this.state.set({ activeId, profiles: parsed.profiles });
-      this.persist();
-      return true;
-    } catch {
-      return false;
-    }
-  }
-
   /** Replaces all holdings of a profile with the given set. */
   saveHoldings(profileId: string, holdings: HoldingMap): void {
     this.state.update((state) => ({
