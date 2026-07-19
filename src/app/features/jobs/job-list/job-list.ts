@@ -1,31 +1,28 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { TranslocoDirective } from '@jsverse/transloco';
-
-import { JobDialog } from '../job-dialog/job-dialog';
 
 @Component({
   selector: 'es-job-list',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [TranslocoDirective],
+  imports: [RouterLink, TranslocoDirective],
   template: `
     <div class="jobs" *transloco="let t">
-      @for (role of t('jobs.roles'); track role.key; let i = $index) {
-        <button type="button" class="job" (click)="open(i)">
+      @for (role of t('jobs.roles'); track role.key) {
+        <a class="job" [routerLink]="['/jobs', role.key]">
           <span class="text">
             <span class="role">{{ role.role }}</span>
             <span class="kind">{{ role.kind }}</span>
           </span>
           <span class="arrow" aria-hidden="true">→</span>
-        </button>
+        </a>
       }
     </div>
   `,
   styles: `
     .jobs { display: grid; border-top: 1px solid var(--line-strong); }
     .job {
-      appearance: none; background: transparent; border: 0; width: 100%; text-align: left;
-      cursor: pointer; color: var(--ink); font: inherit;
+      text-decoration: none; color: var(--ink);
       display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 18px;
       padding: 22px 4px; border-bottom: 1px solid var(--line);
       transition: padding 0.2s ease, background 0.2s ease;
@@ -38,16 +35,4 @@ import { JobDialog } from '../job-dialog/job-dialog';
     .job:hover .arrow { transform: translateX(6px); }
   `,
 })
-export class JobList {
-  private readonly dialog = inject(MatDialog);
-
-  open(index: number): void {
-    this.dialog.open(JobDialog, {
-      data: { index },
-      panelClass: 'es-dialog-panel',
-      width: 'min(720px, 94vw)',
-      autoFocus: 'first-tabbable',
-      restoreFocus: true,
-    });
-  }
-}
+export class JobList {}

@@ -17,6 +17,11 @@ export const routes: Routes = [
     title: 'Jobs — Elias Solutions GmbH',
   },
   {
+    path: 'jobs/:key',
+    loadComponent: () => import('./features/jobs/job-detail/job-detail').then((m) => m.JobDetail),
+    title: 'Jobs — Elias Solutions GmbH',
+  },
+  {
     path: 'contact',
     loadComponent: () => import('./features/contact/contact').then((m) => m.Contact),
     title: 'Kontakt — Elias Solutions GmbH',
