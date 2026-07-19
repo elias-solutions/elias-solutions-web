@@ -1,0 +1,84 @@
+{
+  "tagline": "SOFTWARE & IA · SVIZZERA",
+  "meta": "Elias Solutions GmbH · Hägendorf",
+  "nav": {
+    "start": "Home",
+    "about": "Chi siamo",
+    "jobs": "Lavoro",
+    "contact": "Contatto",
+    "legal": "Note legali"
+  },
+  "hero": {
+    "eyebrow": "Competenza svizzera in software & IA · Hägendorf",
+    "title": "Soluzioni digitali con",
+    "titleAccent": "fiducia svizzera.",
+    "lead": "Elias Solutions sviluppa software per l'eGovernment, le assicurazioni e le banche – e mette le PMI in grado di usare l'intelligenza artificiale in modo responsabile e conforme.",
+    "cta1": "Parliamo del progetto",
+    "cta2": "Posizioni aperte"
+  },
+  "trust": {
+    "swissMade": "Swiss Made — sviluppato a Hägendorf, Canton Soletta",
+    "sectors": ["eGovernment", "Assicurazioni", "Banche", "PMI & IA"]
+  },
+  "about": {
+    "label": "Cosa facciamo",
+    "title": "Due competenze, un obiettivo: digitalizzazione affidabile secondo lo standard svizzero."
+  },
+  "pillars": {
+    "dev": {
+      "idx": "01 — Dev Solutions",
+      "title": "Software per settori regolamentati.",
+      "text": "Applicazioni su misura per eGovernment, assicurazioni e banche – sicure, manutenibili e conformi.",
+      "items": [
+        "Fullstack C# / .NET & Angular",
+        "Fullstack Java & Angular",
+        "Ambienti sicuri e regolamentati",
+        "SOLID & Clean Code, guidato dai test"
+      ]
+    },
+    "ai": {
+      "idx": "02 — IA per PMI",
+      "title": "Facciamo crescere le PMI con l'intelligenza artificiale.",
+      "text": "Formazione e accompagnamento affinché le PMI usino l'IA in modo efficace e responsabile.",
+      "items": [
+        "Introduzione all'IA & casi d'uso",
+        "Utilizzo responsabile",
+        "Prompting professionale",
+        "GDPR & conformità"
+      ]
+    }
+  },
+  "jobs": {
+    "label": "Carriere",
+    "title": "Assumiamo.",
+    "note": "Cresciamo – e cerchiamo persone che acquisiscono progetti, li realizzano e avvicinano i clienti all'IA.",
+    "roles": [
+      { "role": "Sviluppatore/trice fullstack C# + Angular", "kind": "Tempo indeterminato · Sviluppo" },
+      { "role": "Sviluppatore/trice fullstack Java + Angular", "kind": "Tempo indeterminato · Sviluppo" },
+      { "role": "Vendite", "kind": "Tempo indeterminato · Acquisizione clienti & progetti" },
+      { "role": "Relatore/trice IA", "kind": "Tempo indeterminato · Spiegare l'IA alle PMI · esperto/a di IA" }
+    ]
+  },
+  "brand": {
+    "label": "Marchio · Proposta",
+    "title": "Una croce svizzera modulare.",
+    "note": "La croce rappresenta la fiducia svizzera e il «più» dell'empowerment; la griglia 3×3 richiama il software e la griglia grafica svizzera. Funziona su bianco, rosso e nero.",
+    "onWhite": "Primario su bianco",
+    "onRed": "Invertito su rosso",
+    "onBlack": "Su nero"
+  },
+  "footer": {
+    "blurb": "Sviluppo software svizzero per il settore pubblico, le assicurazioni e le banche – e formazione IA per le PMI.",
+    "contactTitle": "Contatto & note legali",
+    "country": "Svizzera",
+    "navTitle": "Navigazione",
+    "legalLeft": "© 2026 Elias Solutions GmbH · 4614 Hägendorf",
+    "legalRight": "Swiss Made · IA responsabile · GDPR & conformità"
+  },
+  "pages": {
+    "about": { "title": "Chi siamo", "lead": "Elias Solutions GmbH – competenza svizzera in software e IA, da Hägendorf." },
+    "contact": { "title": "Contatto", "lead": "Parliamo del vostro progetto." },
+    "jobs": { "title": "Lavoro", "lead": "Entra a far parte di Elias Solutions." },
+    "legal": { "title": "Note legali", "lead": "Informazioni secondo il diritto svizzero." }
+  }
+}

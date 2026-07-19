@@ -1,0 +1,16 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+// Language row + navigation pinned together as one sticky unit.
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+}
+
+main {
+  flex: 1 0 auto;
+}

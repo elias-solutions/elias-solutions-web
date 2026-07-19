@@ -1,0 +1,84 @@
+{
+  "tagline": "SOFTWARE & KI · SCHWEIZ",
+  "meta": "Elias Solutions GmbH · Hägendorf",
+  "nav": {
+    "start": "Start",
+    "about": "Über uns",
+    "jobs": "Jobs",
+    "contact": "Kontakt",
+    "legal": "Impressum"
+  },
+  "hero": {
+    "eyebrow": "Schweizer Software- & KI-Kompetenz · Hägendorf",
+    "title": "Digitale Lösungen mit",
+    "titleAccent": "Schweizer Vertrauen.",
+    "lead": "Elias Solutions entwickelt Software für eGovernment, Versicherungen und Banken – und befähigt KMU, künstliche Intelligenz verantwortungsvoll und regelkonform einzusetzen.",
+    "cta1": "Projekt besprechen",
+    "cta2": "Offene Stellen"
+  },
+  "trust": {
+    "swissMade": "Swiss Made — entwickelt in Hägendorf, Kanton Solothurn",
+    "sectors": ["eGovernment", "Versicherungen", "Banken", "KMU & KI"]
+  },
+  "about": {
+    "label": "Was wir tun",
+    "title": "Zwei Kompetenzen, ein Anspruch: verlässliche Digitalisierung nach Schweizer Standard."
+  },
+  "pillars": {
+    "dev": {
+      "idx": "01 — Dev Solutions",
+      "title": "Software für regulierte Branchen.",
+      "text": "Massgeschneiderte Anwendungen für eGovernment, Versicherungen und Banken – sicher, wartbar und konform gebaut.",
+      "items": [
+        "Fullstack C# / .NET & Angular",
+        "Fullstack Java & Angular",
+        "Sichere, regulierte Umgebungen",
+        "SOLID & Clean Code, testgetrieben"
+      ]
+    },
+    "ai": {
+      "idx": "02 — KI für KMU",
+      "title": "Wir heben KMU mit künstlicher Intelligenz.",
+      "text": "Trainings und Begleitung, damit kleine und mittlere Unternehmen KI wirksam und verantwortungsvoll nutzen.",
+      "items": [
+        "Einführung in KI & Anwendungsfälle",
+        "Verantwortungsvoller Einsatz",
+        "Professionelles Prompting",
+        "DSGVO & Compliance im Blick"
+      ]
+    }
+  },
+  "jobs": {
+    "label": "Karriere",
+    "title": "Wir stellen ein.",
+    "note": "Wir wachsen – und suchen Menschen, die Projekte gewinnen, umsetzen und Kundinnen und Kunden KI näherbringen.",
+    "roles": [
+      { "role": "Fullstack-Entwickler:in C# + Angular", "kind": "Festanstellung · Entwicklung" },
+      { "role": "Fullstack-Entwickler:in Java + Angular", "kind": "Festanstellung · Entwicklung" },
+      { "role": "Sales", "kind": "Festanstellung · Neukunden & Projekte gewinnen" },
+      { "role": "Referent:in KI", "kind": "Festanstellung · KMU erklären, wie KI funktioniert · KI-affin" }
+    ]
+  },
+  "brand": {
+    "label": "Markenzeichen · Vorschlag",
+    "title": "Ein modulares Schweizerkreuz.",
+    "note": "Das Kreuz steht für Schweizer Vertrauen und für das «Plus» der Befähigung; das 3×3-Raster verweist auf Software und das Schweizer Gestaltungsraster. Funktioniert auf Weiss, Rot und Schwarz.",
+    "onWhite": "Primär auf Weiss",
+    "onRed": "Invers auf Rot",
+    "onBlack": "Auf Schwarz"
+  },
+  "footer": {
+    "blurb": "Schweizer Software-Entwicklung für den öffentlichen Sektor, Versicherungen und Banken – und KI-Befähigung für KMU.",
+    "contactTitle": "Kontakt & Impressum",
+    "country": "Schweiz",
+    "navTitle": "Navigation",
+    "legalLeft": "© 2026 Elias Solutions GmbH · 4614 Hägendorf",
+    "legalRight": "Swiss Made · Verantwortungsvolle KI · DSGVO & Compliance"
+  },
+  "pages": {
+    "about": { "title": "Über uns", "lead": "Elias Solutions GmbH – Schweizer Software- und KI-Kompetenz aus Hägendorf." },
+    "contact": { "title": "Kontakt", "lead": "Sprechen wir über Ihr Projekt." },
+    "jobs": { "title": "Jobs", "lead": "Werden Sie Teil von Elias Solutions." },
+    "legal": { "title": "Impressum", "lead": "Angaben gemäss schweizerischem Recht." }
+  }
+}

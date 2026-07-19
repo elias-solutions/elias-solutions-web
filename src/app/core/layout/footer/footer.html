@@ -1,0 +1,40 @@
+<footer *transloco="let t">
+  <div class="wrap foot">
+    <div class="brand">
+      <a class="logo" routerLink="/" aria-label="Elias Solutions">
+        <es-logo [size]="30" />
+        <span class="word">ELIAS<b>·</b>SOLUTIONS</span>
+      </a>
+      <p class="note">{{ t('footer.blurb') }}</p>
+    </div>
+
+    <div>
+      <h4>{{ t('footer.contactTitle') }}</h4>
+      <address>
+        {{ company.name }}<br />
+        {{ company.street }}<br />
+        {{ company.postalCode }} {{ company.city }}<br />
+        {{ t('footer.country') }}<br /><br />
+        <a [href]="'mailto:' + company.email">{{ company.email }}</a><br />
+        <a [href]="'https://' + company.domain">{{ company.domain }}</a><br />
+        {{ company.owner }}
+      </address>
+    </div>
+
+    <div>
+      <h4>{{ t('footer.navTitle') }}</h4>
+      <div class="links">
+        <a routerLink="/">{{ t('nav.start') }}</a>
+        <a routerLink="/about">{{ t('nav.about') }}</a>
+        <a routerLink="/jobs">{{ t('nav.jobs') }}</a>
+        <a routerLink="/contact">{{ t('nav.contact') }}</a>
+        <a routerLink="/impressum">{{ t('nav.legal') }}</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap legal">
+    <span>{{ t('footer.legalLeft') }}</span>
+    <span>{{ t('footer.legalRight') }}</span>
+  </div>
+</footer>

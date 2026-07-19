@@ -1,0 +1,119 @@
+<ng-container *transloco="let t">
+  <!-- HERO -->
+  <section class="hero" id="start">
+    <div class="wrap">
+      <p class="eyebrow label">
+        <span class="dot"></span> {{ t('hero.eyebrow') }}
+      </p>
+      <h1>{{ t('hero.title') }} <em>{{ t('hero.titleAccent') }}</em></h1>
+      <p class="lead">{{ t('hero.lead') }}</p>
+      <div class="actions">
+        <a class="btn solid" routerLink="/contact">{{ t('hero.cta1') }} →</a>
+        <a class="btn" routerLink="/jobs">{{ t('hero.cta2') }}</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <div class="trust">
+    <div class="wrap inner">
+      <span class="swissmade">
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" fill="#E30613" />
+          <g fill="#fff">
+            <rect x="13" y="7" width="6" height="18" />
+            <rect x="7" y="13" width="18" height="6" />
+          </g>
+        </svg>
+        {{ t('trust.swissMade') }}
+      </span>
+      <div class="sectors">
+        @for (sector of t('trust.sectors'); track sector) {
+          <span class="chip">{{ sector }}</span>
+        }
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT / PILLARS -->
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">{{ t('about.label') }}</span>
+        <div class="rule-red"></div>
+        <h2>{{ t('about.title') }}</h2>
+      </div>
+      <div class="pillars">
+        <article class="pillar">
+          <span class="idx">{{ t('pillars.dev.idx') }}</span>
+          <h3>{{ t('pillars.dev.title') }}</h3>
+          <p>{{ t('pillars.dev.text') }}</p>
+          <ul>
+            @for (item of t('pillars.dev.items'); track item) {
+              <li>{{ item }}</li>
+            }
+          </ul>
+        </article>
+        <article class="pillar">
+          <span class="idx">{{ t('pillars.ai.idx') }}</span>
+          <h3>{{ t('pillars.ai.title') }}</h3>
+          <p>{{ t('pillars.ai.text') }}</p>
+          <ul>
+            @for (item of t('pillars.ai.items'); track item) {
+              <li>{{ item }}</li>
+            }
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOBS TEASER -->
+  <section id="jobs">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">{{ t('jobs.label') }}</span>
+        <div class="rule-red"></div>
+        <h2>{{ t('jobs.title') }}</h2>
+        <p class="note">{{ t('jobs.note') }}</p>
+      </div>
+      <div class="jobs">
+        @for (role of t('jobs.roles'); track role.role) {
+          <a class="job" routerLink="/jobs">
+            <div>
+              <div class="role">{{ role.role }}</div>
+              <div class="kind">{{ role.kind }}</div>
+            </div>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- LOGO CONCEPT -->
+  <section id="brand" class="brand-section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">{{ t('brand.label') }}</span>
+        <div class="rule-red"></div>
+        <h2>{{ t('brand.title') }}</h2>
+        <p class="note">{{ t('brand.note') }}</p>
+      </div>
+      <div class="brandgrid">
+        <div class="swatch onwhite">
+          <es-logo [size]="64" />
+          <span class="cap">{{ t('brand.onWhite') }}</span>
+        </div>
+        <div class="swatch onred">
+          <es-logo [size]="64" [ground]="'#E30613'" [cross]="'#ffffff'" />
+          <span class="cap">{{ t('brand.onRed') }}</span>
+        </div>
+        <div class="swatch onblack">
+          <es-logo [size]="64" />
+          <span class="cap">{{ t('brand.onBlack') }}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</ng-container>

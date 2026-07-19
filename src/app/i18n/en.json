@@ -1,0 +1,84 @@
+{
+  "tagline": "SOFTWARE & AI · SWITZERLAND",
+  "meta": "Elias Solutions GmbH · Hägendorf",
+  "nav": {
+    "start": "Home",
+    "about": "About",
+    "jobs": "Jobs",
+    "contact": "Contact",
+    "legal": "Legal notice"
+  },
+  "hero": {
+    "eyebrow": "Swiss software & AI expertise · Hägendorf",
+    "title": "Digital solutions with",
+    "titleAccent": "Swiss trust.",
+    "lead": "Elias Solutions builds software for eGovernment, insurance and banking – and empowers SMEs to use artificial intelligence responsibly and compliantly.",
+    "cta1": "Discuss a project",
+    "cta2": "Open positions"
+  },
+  "trust": {
+    "swissMade": "Swiss Made — engineered in Hägendorf, Canton of Solothurn",
+    "sectors": ["eGovernment", "Insurance", "Banking", "SME & AI"]
+  },
+  "about": {
+    "label": "What we do",
+    "title": "Two competencies, one standard: dependable digitalisation, Swiss quality."
+  },
+  "pillars": {
+    "dev": {
+      "idx": "01 — Dev Solutions",
+      "title": "Software for regulated industries.",
+      "text": "Tailored applications for eGovernment, insurance and banking – secure, maintainable and compliant.",
+      "items": [
+        "Fullstack C# / .NET & Angular",
+        "Fullstack Java & Angular",
+        "Secure, regulated environments",
+        "SOLID & Clean Code, test-driven"
+      ]
+    },
+    "ai": {
+      "idx": "02 — AI for SMEs",
+      "title": "We lift SMEs with artificial intelligence.",
+      "text": "Training and guidance so small and medium businesses use AI effectively and responsibly.",
+      "items": [
+        "Introduction to AI & use cases",
+        "Responsible use",
+        "Professional prompting",
+        "GDPR & compliance"
+      ]
+    }
+  },
+  "jobs": {
+    "label": "Careers",
+    "title": "We're hiring.",
+    "note": "We're growing – and looking for people who win projects, deliver them, and bring AI closer to our customers.",
+    "roles": [
+      { "role": "Fullstack developer C# + Angular", "kind": "Permanent · Engineering" },
+      { "role": "Fullstack developer Java + Angular", "kind": "Permanent · Engineering" },
+      { "role": "Sales", "kind": "Permanent · Win clients & projects" },
+      { "role": "AI trainer & speaker", "kind": "Permanent · Explain AI to SMEs · AI-savvy" }
+    ]
+  },
+  "brand": {
+    "label": "Logo · Proposal",
+    "title": "A modular Swiss cross.",
+    "note": "The cross stands for Swiss trust and the '+' of enablement; the 3×3 grid nods to software and the Swiss design grid. Works on white, red and black.",
+    "onWhite": "Primary on white",
+    "onRed": "Reversed on red",
+    "onBlack": "On black"
+  },
+  "footer": {
+    "blurb": "Swiss software engineering for the public sector, insurance and banking – and AI enablement for SMEs.",
+    "contactTitle": "Contact & legal notice",
+    "country": "Switzerland",
+    "navTitle": "Navigation",
+    "legalLeft": "© 2026 Elias Solutions GmbH · 4614 Hägendorf",
+    "legalRight": "Swiss Made · Responsible AI · GDPR & compliance"
+  },
+  "pages": {
+    "about": { "title": "About", "lead": "Elias Solutions GmbH – Swiss software and AI expertise, from Hägendorf." },
+    "contact": { "title": "Contact", "lead": "Let's talk about your project." },
+    "jobs": { "title": "Jobs", "lead": "Join Elias Solutions." },
+    "legal": { "title": "Legal notice", "lead": "Information under Swiss law." }
+  }
+}

@@ -1,1 +1,116 @@
-/* You can add global styles to this file, and also import other style files */
+// Angular Material (M3) theme — Swiss red primary.
+@use '@angular/material' as mat;
+
+html {
+  @include mat.theme((
+    color: (
+      primary: mat.$red-palette,
+      tertiary: mat.$red-palette,
+    ),
+    typography: 'Helvetica Neue, Helvetica, Arial, "Segoe UI", system-ui, sans-serif',
+    density: 0,
+  ));
+}
+
+/* ==========================================================================
+   Design tokens — Swiss International Style (red / white / black)
+   ========================================================================== */
+:root {
+  --red: #E30613;
+  --red-ink: #B8050F;
+  --paper: #FFFFFF;
+  --paper-2: #F6F4F1;
+  --ink: #0A0A0A;
+  --muted: #6E6A66;
+  --line: #E6E3DF;
+  --line-strong: #111111;
+
+  --maxw: 1180px;
+  --pad: clamp(20px, 5vw, 64px);
+
+  --font: 'Helvetica Neue', Helvetica, Arial, 'Segoe UI', system-ui, sans-serif;
+  --step--1: clamp(.78rem, .76rem + .1vw, .84rem);
+  --step-0: clamp(1rem, .97rem + .15vw, 1.08rem);
+  --step-1: clamp(1.2rem, 1.1rem + .5vw, 1.5rem);
+  --step-2: clamp(1.6rem, 1.3rem + 1.4vw, 2.4rem);
+  --step-3: clamp(2.6rem, 1.8rem + 4vw, 5.4rem);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #0D0D0F; --paper-2: #151518; --ink: #F4F2EF; --muted: #9A948E;
+    --line: #262629; --line-strong: #F4F2EF; --red: #FF2233; --red-ink: #FF4757;
+  }
+}
+:root[data-theme='light'] {
+  --paper: #FFFFFF; --paper-2: #F6F4F1; --ink: #0A0A0A; --muted: #6E6A66;
+  --line: #E6E3DF; --line-strong: #111111; --red: #E30613; --red-ink: #B8050F;
+}
+:root[data-theme='dark'] {
+  --paper: #0D0D0F; --paper-2: #151518; --ink: #F4F2EF; --muted: #9A948E;
+  --line: #262629; --line-strong: #F4F2EF; --red: #FF2233; --red-ink: #FF4757;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+* { box-sizing: border-box; }
+html { height: 100%; scroll-behavior: smooth; }
+body {
+  min-height: 100%;
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: var(--step-0);
+  line-height: 1.55;
+  color-scheme: light dark;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+a { color: inherit; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+/* ==========================================================================
+   Shared layout primitives (used across feature + layout components)
+   ========================================================================== */
+.wrap { max-width: var(--maxw); margin-inline: auto; padding-inline: var(--pad); }
+
+.label {
+  font-size: var(--step--1);
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.rule-red { height: 3px; background: var(--red); width: 64px; }
+
+.note { font-size: var(--step--1); color: var(--muted); max-width: 62ch; }
+
+.btn {
+  display: inline-flex; align-items: center; gap: .5rem; text-decoration: none;
+  font-weight: 700; font-size: var(--step--1); letter-spacing: .02em;
+  padding: 11px 18px; border: 1.5px solid var(--line-strong); background: transparent;
+  color: var(--ink); cursor: pointer;
+  transition: background .18s ease, color .18s ease, border-color .18s ease;
+}
+.btn.solid { background: var(--red); border-color: var(--red); color: #fff; }
+.btn.solid:hover { background: var(--red-ink); border-color: var(--red-ink); }
+.btn:not(.solid):hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+.chip {
+  font-size: var(--step--1); border: 1px solid var(--line); padding: 6px 12px;
+  color: var(--muted); font-weight: 600; letter-spacing: .02em;
+}
+
+.section-head { display: grid; gap: 16px; margin-bottom: 44px; max-width: 64ch; }
+.section-head h2 {
+  font-size: var(--step-2); letter-spacing: -.02em; font-weight: 800; margin: 0;
+  line-height: 1.05; text-wrap: balance;
+}
+
+:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
