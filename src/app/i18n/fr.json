@@ -76,7 +76,11 @@
   },
   "pages": {
     "about": { "title": "À propos", "lead": "Elias Solutions GmbH – expertise suisse en logiciel et IA, depuis Hägendorf." },
-    "contact": { "title": "Contact", "lead": "Parlons de votre projet." },
+    "contact": {
+      "title": "Contact",
+      "lead": "Parlons de votre projet.",
+      "body": "Que vous ayez besoin d'accompagnement dans le développement logiciel ou que vous souhaitiez introduire l'IA dans votre entreprise – nous vous accompagnons de bout en bout : d'une utilisation respectueuse de la protection des données à un prompting efficace qui produit des résultats précis et une consommation de tokens responsable, optimisant ainsi votre rapport coût-bénéfice, jusqu'à l'analyse complète de vos processus en interne. Le tout en gardant toujours à l'esprit la conformité et la protection des données – conformément à la nLPD en Suisse et au RGPD dans l'UE. Contactez-nous."
+    },
     "jobs": { "title": "Emplois", "lead": "Rejoignez Elias Solutions." },
     "legal": { "title": "Mentions légales", "lead": "Informations selon le droit suisse." }
   }

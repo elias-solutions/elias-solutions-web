@@ -76,7 +76,11 @@
   },
   "pages": {
     "about": { "title": "About", "lead": "Elias Solutions GmbH – Swiss software and AI expertise, from Hägendorf." },
-    "contact": { "title": "Contact", "lead": "Let's talk about your project." },
+    "contact": {
+      "title": "Contact",
+      "lead": "Let's talk about your project.",
+      "body": "Whether you need support in software development or want to introduce AI into your company – we support you end to end: from data-protection-compliant use to efficient prompting that delivers precise results and responsible token consumption, optimising your cost-benefit ratio, all the way to a complete in-house analysis of your processes. Throughout, we keep compliance and data protection firmly in view – in line with the revised FADP (revDPA) in Switzerland and the GDPR in the EU. Get in touch with us."
+    },
     "jobs": { "title": "Jobs", "lead": "Join Elias Solutions." },
     "legal": { "title": "Legal notice", "lead": "Information under Swiss law." }
   }

@@ -76,7 +76,11 @@
   },
   "pages": {
     "about": { "title": "Über uns", "lead": "Elias Solutions GmbH – Schweizer Software- und KI-Kompetenz aus Hägendorf." },
-    "contact": { "title": "Kontakt", "lead": "Sprechen wir über Ihr Projekt." },
+    "contact": {
+      "title": "Kontakt",
+      "lead": "Sprechen wir über Ihr Projekt.",
+      "body": "Ob Sie Unterstützung in der Softwareentwicklung benötigen oder den Einstieg in die KI in Ihrem Unternehmen vollziehen möchten – wir begleiten Sie ganzheitlich: von der datenschutzkonformen Nutzung über effizientes Prompting, das zu präzisen Ergebnissen und einem verantwortungsvollen Token-Verbrauch führt und so Ihre Kosten-Nutzen-Bilanz optimiert, bis hin zur vollständigen Analyse Ihrer Prozesse inhouse. Dabei behalten wir Compliance und Datenschutz stets im Blick – konform mit dem revidierten DSG (revDSG) in der Schweiz und der DSGVO in der EU. Melden Sie sich bei uns."
+    },
     "jobs": { "title": "Jobs", "lead": "Werden Sie Teil von Elias Solutions." },
     "legal": { "title": "Impressum", "lead": "Angaben gemäss schweizerischem Recht." }
   }
