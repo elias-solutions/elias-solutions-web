@@ -21,13 +21,16 @@ export class EmailjsJobApplicationSender implements JobApplicationSender {
     }
 
     const { serviceId, templateId, publicKey } = environment.emailjsJobs;
+    const consentNote = `Datenschutzerklärung akzeptiert: ${application.consentTimestamp}`;
     const params = {
       position: application.role,
       role: application.role,
       role_key: application.roleKey,
       email: application.email,
       reply_to: application.email,
-      message: application.message,
+      message: `${application.message}\n\n---\n${consentNote}`,
+      consent: consentNote,
+      consent_timestamp: application.consentTimestamp,
     };
 
     await emailjs.send(serviceId, templateId, params, { publicKey });

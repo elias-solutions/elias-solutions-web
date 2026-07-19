@@ -37,7 +37,7 @@ export class ContactForm {
     this.state.set('sending');
     try {
       const { consent, ...message } = this.form.getRawValue();
-      await this.sender.send(message);
+      await this.sender.send({ ...message, consentTimestamp: new Date().toISOString() });
       this.state.set('sent');
       this.form.reset();
     } catch {

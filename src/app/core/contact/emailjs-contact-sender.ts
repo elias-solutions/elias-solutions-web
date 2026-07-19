@@ -21,6 +21,7 @@ export class EmailjsContactSender implements ContactSender {
     }
 
     const { serviceId, templateId, publicKey } = environment.emailjs;
+    const consentNote = `Datenschutzerklärung akzeptiert: ${message.consentTimestamp}`;
     const params = {
       name: message.name,
       from_name: message.name,
@@ -30,7 +31,9 @@ export class EmailjsContactSender implements ContactSender {
       reply_to: message.email,
       company: message.company,
       phone: message.company,
-      message: message.message,
+      message: `${message.message}\n\n---\n${consentNote}`,
+      consent: consentNote,
+      consent_timestamp: message.consentTimestamp,
     };
 
     await emailjs.send(serviceId, templateId, params, { publicKey });

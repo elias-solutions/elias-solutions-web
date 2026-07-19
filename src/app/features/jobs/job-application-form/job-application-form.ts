@@ -38,7 +38,12 @@ export class JobApplicationForm {
     this.state.set('sending');
     try {
       const { consent, ...fields } = this.form.getRawValue();
-      await this.sender.send({ role: this.role(), roleKey: this.roleKey(), ...fields });
+      await this.sender.send({
+        role: this.role(),
+        roleKey: this.roleKey(),
+        ...fields,
+        consentTimestamp: new Date().toISOString(),
+      });
       this.state.set('sent');
       this.form.reset();
     } catch {

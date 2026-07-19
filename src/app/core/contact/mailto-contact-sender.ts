@@ -26,6 +26,9 @@ export class MailtoContactSender implements ContactSender {
       message.company ? `Unternehmen: ${message.company}` : null,
       '',
       message.message,
+      '',
+      '---',
+      `Datenschutzerklärung akzeptiert: ${message.consentTimestamp}`,
     ]
       .filter((line): line is string => line !== null)
       .join('\n');
