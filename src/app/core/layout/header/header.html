@@ -4,20 +4,18 @@
       <es-logo [size]="30" />
       <span class="word">ELIAS<b>·</b>SOLUTIONS<span class="tag">{{ t('tagline') }}</span></span>
     </a>
-    <div class="bar-right">
-      <nav class="main" aria-label="Navigation">
-        <a
-          class="navlink"
-          routerLink="/"
-          routerLinkActive="active"
-          [routerLinkActiveOptions]="{ exact: true }"
-          >{{ t('nav.start') }}</a
-        >
-        <a class="navlink" routerLink="/about" routerLinkActive="active">{{ t('nav.about') }}</a>
-        <a class="navlink" routerLink="/jobs" routerLinkActive="active">{{ t('nav.jobs') }}</a>
-        <a class="navlink" routerLink="/impressum" routerLinkActive="active">{{ t('nav.legal') }}</a>
-      </nav>
-      <a class="btn solid contact-btn" routerLink="/contact">{{ t('nav.contact') }}</a>
-    </div>
+    <nav class="main" aria-label="Navigation">
+      <a
+        class="navlink"
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >{{ t('nav.start') }}</a
+      >
+      <a class="navlink" routerLink="/about" routerLinkActive="active">{{ t('nav.about') }}</a>
+      <a class="navlink" routerLink="/jobs" routerLinkActive="active">{{ t('nav.jobs') }}</a>
+      <a class="navlink" routerLink="/impressum" routerLinkActive="active">{{ t('nav.legal') }}</a>
+      <a class="navlink" routerLink="/contact" routerLinkActive="active">{{ t('nav.contact') }}</a>
+    </nav>
   </div>
 </header>

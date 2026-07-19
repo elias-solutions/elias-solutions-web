@@ -14,12 +14,6 @@ header {
   height: 68px;
 }
 
-.bar-right {
-  display: flex;
-  align-items: center;
-  gap: clamp(10px, 1.8vw, 22px);
-}
-
 .logo {
   display: inline-flex;
   align-items: center;
@@ -84,5 +78,4 @@ nav.main a.active::after {
 
 @media (max-width: 520px) {
   .word .tag { display: none; }
-  .contact-btn { display: none; }
 }
