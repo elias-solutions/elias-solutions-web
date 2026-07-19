@@ -1,0 +1,5 @@
+# SPA fallback for Netlify / Cloudflare Pages.
+# Existing files (the prerendered pages, assets, service worker) are served
+# first; only paths without a matching file fall back to the client-render
+# shell — this is what makes /portfolio and any deep link work.
+/*    /index.csr.html   200

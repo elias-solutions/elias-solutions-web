@@ -1,0 +1,46 @@
+# Elias Solutions — Apache config for the Angular static build.
+# Upload the CONTENTS of dist/elias-solutions-web/browser/ (including this file)
+# into your web root (e.g. public_html/).
+
+# Serve index.html for the root and for prerendered directories (/about, ...).
+DirectoryIndex index.html
+
+# Avoid content negotiation interfering with extension-less routes.
+<IfModule mod_negotiation.c>
+  Options -MultiViews
+</IfModule>
+
+# Primary SPA fallback (core, needs no mod_rewrite): any request that does not
+# map to a real file/directory is served the client-render shell.
+FallbackResource /index.csr.html
+
+# Correct MIME types.
+<IfModule mod_mime.c>
+  AddType application/manifest+json .webmanifest
+  AddType image/svg+xml .svg
+  AddType text/javascript .js
+</IfModule>
+
+# SPA fallback: existing files/dirs are served as-is (prerendered pages, assets,
+# service worker); everything else falls back to the client-render shell so
+# /portfolio and any deep link work.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  RewriteRule ^ /index.csr.html [L]
+</IfModule>
+
+# Caching: hashed assets long-lived, HTML / service worker always revalidated.
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|woff2?|ttf|otf|png|jpg|jpeg|gif|webp|avif)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "(index\.html|index\.csr\.html|ngsw-worker\.js|ngsw\.json|site\.webmanifest)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>
