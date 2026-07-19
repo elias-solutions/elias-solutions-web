@@ -15,14 +15,12 @@
 
 .lang {
   display: inline-flex;
-  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .lang button {
   appearance: none;
   background: transparent;
   border: 0;
-  border-right: 1px solid rgba(255, 255, 255, 0.3);
   cursor: pointer;
   font: inherit;
   font-size: 0.72rem;
@@ -33,6 +31,5 @@
   transition: background 0.15s ease, color 0.15s ease;
 }
 
-.lang button:last-child { border-right: 0; }
 .lang button:hover { color: #ffffff; }
 .lang button[aria-pressed='true'] { background: #e30613; color: #fff; }
