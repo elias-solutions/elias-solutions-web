@@ -51,11 +51,91 @@
     "label": "Carrière",
     "title": "Nous recrutons.",
     "note": "Nous grandissons – et cherchons des personnes qui gagnent des projets, les réalisent et rapprochent l'IA de nos clients.",
+    "tasksTitle": "Missions",
+    "expectationsTitle": "Attentes",
+    "apply": "Postuler maintenant",
+    "form": {
+      "email": "Votre e-mail",
+      "message": "Description / motivation",
+      "submit": "Envoyer la candidature",
+      "sending": "Envoi en cours …",
+      "success": "Merci pour votre candidature ! Nous vous répondrons rapidement.",
+      "error": "Votre candidature n'a pas pu être envoyée. Veuillez réessayer ou écrire à contact@elias-solutions.ch.",
+      "close": "Fermer",
+      "required": "Champ obligatoire",
+      "invalidEmail": "Veuillez saisir une adresse e-mail valide."
+    },
     "roles": [
-      { "role": "Développeur·euse fullstack C# + Angular", "kind": "CDI · Développement" },
-      { "role": "Développeur·euse fullstack Java + Angular", "kind": "CDI · Développement" },
-      { "role": "Commercial·e", "kind": "CDI · Acquisition de clients & projets" },
-      { "role": "Référent·e IA", "kind": "CDI · Expliquer l'IA aux PME · à l'aise avec l'IA" }
+      {
+        "key": "fullstack-csharp",
+        "role": "Développeur·euse fullstack C# + Angular",
+        "kind": "CDI · Développement",
+        "tasks": [
+          "Développement et maintenance d'applications web avec C# / .NET et Angular",
+          "Réalisation de solutions pour l'eGovernment, les assurances et les banques",
+          "Analyse des besoins avec nos clientes et clients",
+          "Développement piloté par les tests et revues de code"
+        ],
+        "expectations": [
+          "Plusieurs années d'expérience avec C# / .NET et Angular",
+          "Solides connaissances en SOLID et Clean Code",
+          "Expérience en environnements réglementés un atout",
+          "Autonomie et esprit d'équipe",
+          "Bonnes connaissances de l'allemand"
+        ]
+      },
+      {
+        "key": "fullstack-java",
+        "role": "Développeur·euse fullstack Java + Angular",
+        "kind": "CDI · Développement",
+        "tasks": [
+          "Développement et maintenance d'applications web avec Java (Spring) et Angular",
+          "Réalisation de solutions sécurisées pour le secteur public, les assurances et les banques",
+          "Analyse des besoins avec nos clientes et clients",
+          "Développement piloté par les tests et revues de code"
+        ],
+        "expectations": [
+          "Plusieurs années d'expérience avec Java (Spring) et Angular",
+          "Solides connaissances en SOLID et Clean Code",
+          "Expérience en environnements réglementés un atout",
+          "Autonomie et esprit d'équipe",
+          "Bonnes connaissances de l'allemand"
+        ]
+      },
+      {
+        "key": "sales",
+        "role": "Commercial·e",
+        "kind": "CDI · Acquisition de clients & projets",
+        "tasks": [
+          "Acquisition de nouvelles clientes et de nouveaux clients pour des projets logiciels et IA",
+          "Développement et entretien de relations clients durables",
+          "Élaboration d'offres et conduite de négociations contractuelles",
+          "Analyse du marché et des besoins dans l'eGovernment, les assurances, les banques et les PME"
+        ],
+        "expectations": [
+          "Expérience de la vente B2B, idéalement dans l'informatique ou le logiciel",
+          "Compréhension des sujets logiciels et IA",
+          "Excellentes capacités de communication et de négociation",
+          "Initiative et orientation résultats"
+        ]
+      },
+      {
+        "key": "ai-referent",
+        "role": "Référent·e IA",
+        "kind": "CDI · Expliquer l'IA aux PME · à l'aise avec l'IA",
+        "tasks": [
+          "Animation de formations et d'ateliers sur l'IA pour les PME",
+          "Transmission d'un usage responsable de l'IA et d'un prompting professionnel",
+          "Sensibilisation à la protection des données, au RGPD et à la conformité",
+          "Élaboration de supports de formation et d'exemples pratiques"
+        ],
+        "expectations": [
+          "Solide compréhension de l'IA et des modèles de langage génératifs",
+          "Expérience dans la transmission de sujets complexes (pédagogie)",
+          "À l'aise avec l'IA et à jour des évolutions",
+          "Aisance à l'oral devant un public"
+        ]
+      }
     ]
   },
   "brand": {

@@ -7,4 +7,10 @@ export const environment = {
     templateId: 'YOUR_EMAILJS_TEMPLATE_ID',
     publicKey: 'YOUR_EMAILJS_PUBLIC_KEY',
   },
+  // Dedicated template for job applications.
+  emailjsJobs: {
+    serviceId: 'YOUR_EMAILJS_SERVICE_ID',
+    templateId: 'YOUR_JOBS_TEMPLATE_ID',
+    publicKey: 'YOUR_EMAILJS_PUBLIC_KEY',
+  },
 };

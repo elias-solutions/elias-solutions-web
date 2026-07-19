@@ -51,11 +51,91 @@
     "label": "Karriere",
     "title": "Wir stellen ein.",
     "note": "Wir wachsen – und suchen Menschen, die Projekte gewinnen, umsetzen und Kundinnen und Kunden KI näherbringen.",
+    "tasksTitle": "Aufgaben",
+    "expectationsTitle": "Erwartungen",
+    "apply": "Jetzt bewerben",
+    "form": {
+      "email": "Ihre E-Mail",
+      "message": "Beschreibung / Motivation",
+      "submit": "Bewerbung senden",
+      "sending": "Wird gesendet …",
+      "success": "Vielen Dank für Ihre Bewerbung! Wir melden uns zeitnah bei Ihnen.",
+      "error": "Ihre Bewerbung konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder schreiben Sie an contact@elias-solutions.ch.",
+      "close": "Schliessen",
+      "required": "Pflichtfeld",
+      "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein."
+    },
     "roles": [
-      { "role": "Fullstack-Entwickler:in C# + Angular", "kind": "Festanstellung · Entwicklung" },
-      { "role": "Fullstack-Entwickler:in Java + Angular", "kind": "Festanstellung · Entwicklung" },
-      { "role": "Sales", "kind": "Festanstellung · Neukunden & Projekte gewinnen" },
-      { "role": "Referent:in KI", "kind": "Festanstellung · KMU erklären, wie KI funktioniert · KI-affin" }
+      {
+        "key": "fullstack-csharp",
+        "role": "Fullstack-Entwickler:in C# + Angular",
+        "kind": "Festanstellung · Entwicklung",
+        "tasks": [
+          "Entwicklung und Wartung von Webanwendungen mit C# / .NET und Angular",
+          "Umsetzung von Lösungen für eGovernment, Versicherungen und Banken",
+          "Anforderungsanalyse gemeinsam mit unseren Kundinnen und Kunden",
+          "Testgetriebene Entwicklung und Code-Reviews"
+        ],
+        "expectations": [
+          "Mehrjährige Erfahrung mit C# / .NET und Angular",
+          "Fundierte Kenntnisse in SOLID und Clean Code",
+          "Erfahrung in regulierten Umgebungen von Vorteil",
+          "Selbstständige, teamorientierte Arbeitsweise",
+          "Gute Deutschkenntnisse"
+        ]
+      },
+      {
+        "key": "fullstack-java",
+        "role": "Fullstack-Entwickler:in Java + Angular",
+        "kind": "Festanstellung · Entwicklung",
+        "tasks": [
+          "Entwicklung und Wartung von Webanwendungen mit Java (Spring) und Angular",
+          "Umsetzung sicherer Lösungen für den öffentlichen Sektor, Versicherungen und Banken",
+          "Anforderungsanalyse gemeinsam mit unseren Kundinnen und Kunden",
+          "Testgetriebene Entwicklung und Code-Reviews"
+        ],
+        "expectations": [
+          "Mehrjährige Erfahrung mit Java (Spring) und Angular",
+          "Fundierte Kenntnisse in SOLID und Clean Code",
+          "Erfahrung in regulierten Umgebungen von Vorteil",
+          "Selbstständige, teamorientierte Arbeitsweise",
+          "Gute Deutschkenntnisse"
+        ]
+      },
+      {
+        "key": "sales",
+        "role": "Sales",
+        "kind": "Festanstellung · Neukunden & Projekte gewinnen",
+        "tasks": [
+          "Gewinnung neuer Kundinnen und Kunden für Software- und KI-Projekte",
+          "Aufbau und Pflege langfristiger Kundenbeziehungen",
+          "Erstellung von Angeboten und Führen von Vertragsverhandlungen",
+          "Markt- und Bedarfsanalyse in eGovernment, Versicherungen, Banken und KMU"
+        ],
+        "expectations": [
+          "Erfahrung im B2B-Vertrieb, idealerweise im IT- oder Software-Umfeld",
+          "Verständnis für Software- und KI-Themen",
+          "Ausgeprägte Kommunikations- und Verhandlungsstärke",
+          "Eigeninitiative und Zielorientierung"
+        ]
+      },
+      {
+        "key": "ai-referent",
+        "role": "Referent:in KI",
+        "kind": "Festanstellung · KMU erklären, wie KI funktioniert · KI-affin",
+        "tasks": [
+          "Durchführung von Trainings und Workshops zu KI für KMU",
+          "Vermittlung von verantwortungsvollem KI-Einsatz und professionellem Prompting",
+          "Sensibilisierung für Datenschutz, DSGVO und Compliance",
+          "Entwicklung von Schulungsunterlagen und Praxisbeispielen"
+        ],
+        "expectations": [
+          "Fundiertes Verständnis von KI und generativen Sprachmodellen",
+          "Erfahrung in der Vermittlung komplexer Themen (Didaktik)",
+          "KI-affin und stets auf dem aktuellen Stand",
+          "Sicheres Auftreten vor Publikum"
+        ]
+      }
     ]
   },
   "brand": {

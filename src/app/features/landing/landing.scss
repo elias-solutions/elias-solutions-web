@@ -140,51 +140,6 @@ section {
   background: var(--red);
 }
 
-/* ---------- Jobs teaser ---------- */
-.jobs {
-  display: grid;
-  border-top: 1px solid var(--line-strong);
-}
-
-.job {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: center;
-  gap: 18px;
-  padding: 22px 4px;
-  border-bottom: 1px solid var(--line);
-  text-decoration: none;
-  color: var(--ink);
-  transition: padding 0.2s ease, background 0.2s ease;
-}
-
-.job:hover {
-  padding-left: 16px;
-  padding-right: 16px;
-  background: var(--paper-2);
-}
-
-.job .role {
-  font-size: var(--step-1);
-  font-weight: 800;
-  letter-spacing: -0.01em;
-}
-
-.job .kind {
-  font-size: var(--step--1);
-  color: var(--muted);
-  font-weight: 600;
-  margin-top: 4px;
-}
-
-.job .arrow {
-  font-size: 1.4rem;
-  color: var(--red);
-  transition: transform 0.2s ease;
-}
-
-.job:hover .arrow { transform: translateX(6px); }
-
 /* ---------- Logo showcase ---------- */
 .brand-section { padding-top: 0; }
 

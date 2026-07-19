@@ -51,11 +51,91 @@
     "label": "Carriere",
     "title": "Assumiamo.",
     "note": "Cresciamo – e cerchiamo persone che acquisiscono progetti, li realizzano e avvicinano i clienti all'IA.",
+    "tasksTitle": "Mansioni",
+    "expectationsTitle": "Requisiti",
+    "apply": "Candidati ora",
+    "form": {
+      "email": "La vostra e-mail",
+      "message": "Descrizione / motivazione",
+      "submit": "Invia la candidatura",
+      "sending": "Invio in corso …",
+      "success": "Grazie per la vostra candidatura! Vi risponderemo a breve.",
+      "error": "Non è stato possibile inviare la candidatura. Riprovate o scrivete a contact@elias-solutions.ch.",
+      "close": "Chiudi",
+      "required": "Campo obbligatorio",
+      "invalidEmail": "Inserite un indirizzo e-mail valido."
+    },
     "roles": [
-      { "role": "Sviluppatore/trice fullstack C# + Angular", "kind": "Tempo indeterminato · Sviluppo" },
-      { "role": "Sviluppatore/trice fullstack Java + Angular", "kind": "Tempo indeterminato · Sviluppo" },
-      { "role": "Vendite", "kind": "Tempo indeterminato · Acquisizione clienti & progetti" },
-      { "role": "Relatore/trice IA", "kind": "Tempo indeterminato · Spiegare l'IA alle PMI · esperto/a di IA" }
+      {
+        "key": "fullstack-csharp",
+        "role": "Sviluppatore/trice fullstack C# + Angular",
+        "kind": "Tempo indeterminato · Sviluppo",
+        "tasks": [
+          "Sviluppo e manutenzione di applicazioni web con C# / .NET e Angular",
+          "Realizzazione di soluzioni per eGovernment, assicurazioni e banche",
+          "Analisi dei requisiti insieme alle nostre clienti e ai nostri clienti",
+          "Sviluppo guidato dai test e revisioni del codice"
+        ],
+        "expectations": [
+          "Esperienza pluriennale con C# / .NET e Angular",
+          "Solide conoscenze di SOLID e Clean Code",
+          "Esperienza in ambienti regolamentati costituisce un vantaggio",
+          "Modo di lavorare autonomo e orientato al team",
+          "Buone conoscenze del tedesco"
+        ]
+      },
+      {
+        "key": "fullstack-java",
+        "role": "Sviluppatore/trice fullstack Java + Angular",
+        "kind": "Tempo indeterminato · Sviluppo",
+        "tasks": [
+          "Sviluppo e manutenzione di applicazioni web con Java (Spring) e Angular",
+          "Realizzazione di soluzioni sicure per il settore pubblico, le assicurazioni e le banche",
+          "Analisi dei requisiti insieme alle nostre clienti e ai nostri clienti",
+          "Sviluppo guidato dai test e revisioni del codice"
+        ],
+        "expectations": [
+          "Esperienza pluriennale con Java (Spring) e Angular",
+          "Solide conoscenze di SOLID e Clean Code",
+          "Esperienza in ambienti regolamentati costituisce un vantaggio",
+          "Modo di lavorare autonomo e orientato al team",
+          "Buone conoscenze del tedesco"
+        ]
+      },
+      {
+        "key": "sales",
+        "role": "Vendite",
+        "kind": "Tempo indeterminato · Acquisizione clienti & progetti",
+        "tasks": [
+          "Acquisizione di nuove clienti e nuovi clienti per progetti software e IA",
+          "Creazione e cura di relazioni durature con i clienti",
+          "Elaborazione di offerte e conduzione di trattative contrattuali",
+          "Analisi del mercato e dei bisogni in eGovernment, assicurazioni, banche e PMI"
+        ],
+        "expectations": [
+          "Esperienza nella vendita B2B, idealmente in ambito IT o software",
+          "Comprensione dei temi software e IA",
+          "Spiccate capacità comunicative e di negoziazione",
+          "Spirito d'iniziativa e orientamento agli obiettivi"
+        ]
+      },
+      {
+        "key": "ai-referent",
+        "role": "Relatore/trice IA",
+        "kind": "Tempo indeterminato · Spiegare l'IA alle PMI · esperto/a di IA",
+        "tasks": [
+          "Conduzione di formazioni e workshop sull'IA per le PMI",
+          "Trasmissione di un uso responsabile dell'IA e di un prompting professionale",
+          "Sensibilizzazione su protezione dei dati, GDPR e conformità",
+          "Sviluppo di materiale didattico ed esempi pratici"
+        ],
+        "expectations": [
+          "Solida comprensione dell'IA e dei modelli linguistici generativi",
+          "Esperienza nella trasmissione di temi complessi (didattica)",
+          "Esperto/a di IA e sempre aggiornato/a",
+          "Sicurezza nel parlare in pubblico"
+        ]
+      }
     ]
   },
   "brand": {

@@ -1,0 +1,41 @@
+<form *transloco="let t" class="form" [formGroup]="form" (ngSubmit)="submit()" novalidate>
+  @if (state() === 'sent') {
+    <p class="success" role="status">{{ t('jobs.form.success') }}</p>
+  }
+  @if (state() === 'error') {
+    <p class="failure" role="alert">{{ t('jobs.form.error') }}</p>
+  }
+
+  <div class="field">
+    <label for="jf-email">{{ t('jobs.form.email') }}</label>
+    <input
+      id="jf-email"
+      type="email"
+      formControlName="email"
+      autocomplete="email"
+      [class.invalid]="showError('email')"
+    />
+    @if (showError('email')) {
+      <span class="error">
+        {{ emailFormatInvalid() ? t('jobs.form.invalidEmail') : t('jobs.form.required') }}
+      </span>
+    }
+  </div>
+
+  <div class="field">
+    <label for="jf-message">{{ t('jobs.form.message') }}</label>
+    <textarea
+      id="jf-message"
+      rows="6"
+      formControlName="message"
+      [class.invalid]="showError('message')"
+    ></textarea>
+    @if (showError('message')) {
+      <span class="error">{{ t('jobs.form.required') }}</span>
+    }
+  </div>
+
+  <button type="submit" class="btn solid" [disabled]="state() === 'sending'">
+    {{ state() === 'sending' ? t('jobs.form.sending') : t('jobs.form.submit') }}
+  </button>
+</form>

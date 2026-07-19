@@ -51,11 +51,91 @@
     "label": "Careers",
     "title": "We're hiring.",
     "note": "We're growing – and looking for people who win projects, deliver them, and bring AI closer to our customers.",
+    "tasksTitle": "Responsibilities",
+    "expectationsTitle": "Requirements",
+    "apply": "Apply now",
+    "form": {
+      "email": "Your email",
+      "message": "Description / motivation",
+      "submit": "Send application",
+      "sending": "Sending …",
+      "success": "Thank you for your application! We'll get back to you shortly.",
+      "error": "Your application could not be sent. Please try again or email contact@elias-solutions.ch.",
+      "close": "Close",
+      "required": "Required field",
+      "invalidEmail": "Please enter a valid email address."
+    },
     "roles": [
-      { "role": "Fullstack developer C# + Angular", "kind": "Permanent · Engineering" },
-      { "role": "Fullstack developer Java + Angular", "kind": "Permanent · Engineering" },
-      { "role": "Sales", "kind": "Permanent · Win clients & projects" },
-      { "role": "AI trainer & speaker", "kind": "Permanent · Explain AI to SMEs · AI-savvy" }
+      {
+        "key": "fullstack-csharp",
+        "role": "Fullstack developer C# + Angular",
+        "kind": "Permanent · Engineering",
+        "tasks": [
+          "Develop and maintain web applications with C# / .NET and Angular",
+          "Build solutions for eGovernment, insurance and banking",
+          "Analyse requirements together with our customers",
+          "Test-driven development and code reviews"
+        ],
+        "expectations": [
+          "Several years of experience with C# / .NET and Angular",
+          "Solid knowledge of SOLID and Clean Code",
+          "Experience in regulated environments a plus",
+          "Independent, team-oriented way of working",
+          "Good German language skills"
+        ]
+      },
+      {
+        "key": "fullstack-java",
+        "role": "Fullstack developer Java + Angular",
+        "kind": "Permanent · Engineering",
+        "tasks": [
+          "Develop and maintain web applications with Java (Spring) and Angular",
+          "Build secure solutions for the public sector, insurance and banking",
+          "Analyse requirements together with our customers",
+          "Test-driven development and code reviews"
+        ],
+        "expectations": [
+          "Several years of experience with Java (Spring) and Angular",
+          "Solid knowledge of SOLID and Clean Code",
+          "Experience in regulated environments a plus",
+          "Independent, team-oriented way of working",
+          "Good German language skills"
+        ]
+      },
+      {
+        "key": "sales",
+        "role": "Sales",
+        "kind": "Permanent · Win clients & projects",
+        "tasks": [
+          "Win new customers for software and AI projects",
+          "Build and maintain long-term customer relationships",
+          "Prepare offers and lead contract negotiations",
+          "Analyse market and needs across eGovernment, insurance, banking and SMEs"
+        ],
+        "expectations": [
+          "Experience in B2B sales, ideally in IT or software",
+          "Understanding of software and AI topics",
+          "Strong communication and negotiation skills",
+          "Initiative and goal orientation"
+        ]
+      },
+      {
+        "key": "ai-referent",
+        "role": "AI trainer & speaker",
+        "kind": "Permanent · Explain AI to SMEs · AI-savvy",
+        "tasks": [
+          "Deliver AI trainings and workshops for SMEs",
+          "Convey responsible AI use and professional prompting",
+          "Raise awareness of data protection, GDPR and compliance",
+          "Develop training materials and practical examples"
+        ],
+        "expectations": [
+          "Solid understanding of AI and generative language models",
+          "Experience in conveying complex topics (didactics)",
+          "AI-savvy and up to date",
+          "Confident public speaking"
+        ]
+      }
     ]
   },
   "brand": {
