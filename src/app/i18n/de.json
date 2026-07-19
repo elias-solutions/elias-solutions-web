@@ -95,6 +95,30 @@
       }
     },
     "jobs": { "title": "Jobs", "lead": "Werden Sie Teil von Elias Solutions." },
-    "legal": { "title": "Impressum", "lead": "Angaben gemäss schweizerischem Recht." }
+    "legal": {
+      "title": "Impressum",
+      "lead": "Angaben gemäss schweizerischem Recht.",
+      "companyLabel": "Unternehmen",
+      "legalFormLabel": "Rechtsform",
+      "legalForm": "Gesellschaft mit beschränkter Haftung (GmbH)",
+      "addressLabel": "Sitz",
+      "representedByLabel": "Vertreten durch",
+      "registerLabel": "Handelsregister",
+      "register": "Handelsregisteramt des Kantons Solothurn",
+      "uidLabel": "Unternehmens-Identifikationsnummer (UID)",
+      "vatLabel": "Mehrwertsteuer-Nummer",
+      "contactLabel": "Kontakt",
+      "phoneLabel": "Telefon",
+      "emailLabel": "E-Mail",
+      "webLabel": "Web",
+      "disclaimerTitle": "Haftungsausschluss",
+      "disclaimer": "Der Autor übernimmt keinerlei Gewähr hinsichtlich der inhaltlichen Richtigkeit, Genauigkeit, Aktualität, Zuverlässigkeit und Vollständigkeit der Informationen. Haftungsansprüche gegen den Autor wegen Schäden materieller oder immaterieller Art, welche aus dem Zugriff oder der Nutzung bzw. Nichtnutzung der veröffentlichten Informationen, durch Missbrauch der Verbindung oder durch technische Störungen entstanden sind, werden ausgeschlossen.",
+      "linksTitle": "Haftung für Links",
+      "links": "Verweise und Links auf Webseiten Dritter liegen ausserhalb unseres Verantwortungsbereichs. Es wird jegliche Verantwortung für solche Webseiten abgelehnt. Der Zugriff und die Nutzung solcher Webseiten erfolgen auf eigene Gefahr der Nutzerin oder des Nutzers.",
+      "copyrightTitle": "Urheberrecht",
+      "copyright": "Die Urheber- und alle anderen Rechte an Inhalten, Bildern, Fotos oder anderen Dateien auf dieser Website gehören ausschliesslich der Elias Solutions GmbH oder den speziell genannten Rechtsinhabern. Für die Reproduktion jeglicher Elemente ist die schriftliche Zustimmung der Urheberrechtsträger im Voraus einzuholen.",
+      "dataProtectionTitle": "Datenschutz",
+      "dataProtection": "Wir behandeln Ihre Personendaten vertraulich und entsprechend dem revidierten schweizerischen Datenschutzgesetz (revDSG) sowie der Datenschutz-Grundverordnung (DSGVO). Über das Kontaktformular übermittelte Daten verwenden wir ausschliesslich zur Bearbeitung Ihrer Anfrage."
+    }
   }
 }

@@ -95,6 +95,30 @@
       }
     },
     "jobs": { "title": "Emplois", "lead": "Rejoignez Elias Solutions." },
-    "legal": { "title": "Mentions légales", "lead": "Informations selon le droit suisse." }
+    "legal": {
+      "title": "Mentions légales",
+      "lead": "Informations selon le droit suisse.",
+      "companyLabel": "Entreprise",
+      "legalFormLabel": "Forme juridique",
+      "legalForm": "Société à responsabilité limitée (GmbH)",
+      "addressLabel": "Siège",
+      "representedByLabel": "Représentée par",
+      "registerLabel": "Registre du commerce",
+      "register": "Registre du commerce du canton de Soleure",
+      "uidLabel": "Numéro d'identification des entreprises (IDE)",
+      "vatLabel": "Numéro de TVA",
+      "contactLabel": "Contact",
+      "phoneLabel": "Téléphone",
+      "emailLabel": "E-mail",
+      "webLabel": "Web",
+      "disclaimerTitle": "Clause de non-responsabilité",
+      "disclaimer": "L'auteur n'assume aucune responsabilité quant à l'exactitude, la précision, l'actualité, la fiabilité et l'exhaustivité des informations. Toute prétention en responsabilité à l'encontre de l'auteur pour des dommages matériels ou immatériels résultant de l'accès aux informations publiées, de leur utilisation ou non-utilisation, d'un usage abusif de la connexion ou de problèmes techniques, est exclue.",
+      "linksTitle": "Responsabilité pour les liens",
+      "links": "Les renvois et liens vers des sites web de tiers sont hors de notre domaine de responsabilité. Toute responsabilité concernant ces sites est déclinée. L'accès et l'utilisation de ces sites se font aux risques et périls de l'utilisateur.",
+      "copyrightTitle": "Droits d'auteur",
+      "copyright": "Les droits d'auteur et tous les autres droits relatifs aux contenus, images, photos ou autres fichiers de ce site appartiennent exclusivement à Elias Solutions GmbH ou aux titulaires de droits spécifiquement mentionnés. Toute reproduction requiert l'accord écrit préalable des titulaires des droits d'auteur.",
+      "dataProtectionTitle": "Protection des données",
+      "dataProtection": "Nous traitons vos données personnelles de manière confidentielle et conformément à la loi suisse révisée sur la protection des données (nLPD) ainsi qu'au règlement général sur la protection des données (RGPD). Les données transmises via le formulaire de contact sont utilisées exclusivement pour traiter votre demande."
+    }
   }
 }

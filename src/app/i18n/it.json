@@ -95,6 +95,30 @@
       }
     },
     "jobs": { "title": "Lavoro", "lead": "Entra a far parte di Elias Solutions." },
-    "legal": { "title": "Note legali", "lead": "Informazioni secondo il diritto svizzero." }
+    "legal": {
+      "title": "Note legali",
+      "lead": "Informazioni secondo il diritto svizzero.",
+      "companyLabel": "Azienda",
+      "legalFormLabel": "Forma giuridica",
+      "legalForm": "Società a garanzia limitata (GmbH)",
+      "addressLabel": "Sede",
+      "representedByLabel": "Rappresentata da",
+      "registerLabel": "Registro di commercio",
+      "register": "Registro di commercio del Cantone di Soletta",
+      "uidLabel": "Numero d'identificazione delle imprese (IDI)",
+      "vatLabel": "Numero IVA",
+      "contactLabel": "Contatto",
+      "phoneLabel": "Telefono",
+      "emailLabel": "E-mail",
+      "webLabel": "Web",
+      "disclaimerTitle": "Esclusione di responsabilità",
+      "disclaimer": "L'autore non si assume alcuna responsabilità per quanto riguarda la correttezza, l'accuratezza, l'attualità, l'affidabilità e la completezza delle informazioni. Sono escluse le pretese di responsabilità nei confronti dell'autore per danni materiali o immateriali derivanti dall'accesso, dall'uso o dal mancato uso delle informazioni pubblicate, da un uso improprio della connessione o da problemi tecnici.",
+      "linksTitle": "Responsabilità per i link",
+      "links": "I riferimenti e i link a siti web di terzi non rientrano nel nostro ambito di responsabilità. Si declina ogni responsabilità per tali siti. L'accesso e l'utilizzo di questi siti avvengono a rischio e pericolo dell'utente.",
+      "copyrightTitle": "Diritto d'autore",
+      "copyright": "I diritti d'autore e tutti gli altri diritti relativi a contenuti, immagini, foto o altri file di questo sito appartengono esclusivamente a Elias Solutions GmbH o ai titolari dei diritti espressamente menzionati. Per la riproduzione di qualsiasi elemento è necessario ottenere in anticipo il consenso scritto dei titolari dei diritti d'autore.",
+      "dataProtectionTitle": "Protezione dei dati",
+      "dataProtection": "Trattiamo i vostri dati personali in modo confidenziale e in conformità con la legge svizzera riveduta sulla protezione dei dati (nLPD) e con il regolamento generale sulla protezione dei dati (GDPR). I dati trasmessi tramite il modulo di contatto vengono utilizzati esclusivamente per elaborare la vostra richiesta."
+    }
   }
 }
