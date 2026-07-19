@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 80" width="470" height="80" role="img" aria-label="Elias Solutions">
+  <title>Elias Solutions — Logo (Wort-Bild-Marke)</title>
+  <!-- Bildmarke (modulares Schweizerkreuz), skaliert über nested viewBox -->
+  <svg x="0" y="8" width="64" height="64" viewBox="0 0 100 100">
+    <rect width="100" height="100" fill="#E30613"/>
+    <g fill="#FFFFFF">
+      <rect x="40" y="14" width="20" height="20"/>
+      <rect x="14" y="40" width="20" height="20"/>
+      <rect x="40" y="40" width="20" height="20"/>
+      <rect x="66" y="40" width="20" height="20"/>
+      <rect x="40" y="66" width="20" height="20"/>
+    </g>
+  </svg>
+  <!-- Schriftzug. Hinweis: für Print die Schrift in Pfade umwandeln (outline). -->
+  <text
+    x="84"
+    y="53"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="34"
+    font-weight="800"
+    letter-spacing="-0.5"
+    fill="#0A0A0A"
+  >ELIAS<tspan fill="#E30613">·</tspan>SOLUTIONS</text>
+</svg>
