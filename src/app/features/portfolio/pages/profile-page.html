@@ -66,11 +66,9 @@
         <label class="field">
           <span class="field__label">Gesamtmenge ({{ asset.unitLabel }})</span>
           <input
-            type="number"
-            min="0"
-            step="0.0001"
+            type="text"
             inputmode="decimal"
-            [ngModel]="draft()[asset.id].amount"
+            [ngModel]="draftText()[asset.id].amount"
             (ngModelChange)="setAmount(asset.id, $event)"
           />
         </label>
@@ -78,11 +76,9 @@
         <label class="field">
           <span class="field__label">Einstandskurs pro {{ asset.unitLabel }}</span>
           <input
-            type="number"
-            min="0"
-            step="1"
+            type="text"
             inputmode="decimal"
-            [ngModel]="draft()[asset.id].entryPrice"
+            [ngModel]="draftText()[asset.id].entryPrice"
             (ngModelChange)="setEntryPrice(asset.id, $event)"
           />
         </label>

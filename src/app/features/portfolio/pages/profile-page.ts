@@ -8,6 +8,10 @@ import { ProfileService } from '../profile/profile.service';
 
 type DraftMap = Record<string, Holding>;
 
+/** Numeric fields that are edited as free text so comma decimals survive on mobile. */
+type NumericField = 'amount' | 'entryPrice';
+type DraftTextMap = Record<string, Record<NumericField, string>>;
+
 @Component({
   selector: 'app-profile-page',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -40,6 +44,14 @@ export class ProfilePage {
   /** Editable copy, seeded from the active profile. */
   protected readonly draft = signal<DraftMap>(this.seedDraft());
 
+  /**
+   * Raw text mirror of the numeric draft fields. Bound to the inputs so the
+   * user's keystrokes (incl. a comma decimal separator on mobile keyboards, or
+   * a half-typed "1,") are preserved verbatim and never overwritten by a
+   * parsed number written back into the field.
+   */
+  protected readonly draftText = signal<DraftTextMap>(this.seedDraftText());
+
   /** True while the draft differs from the active profile's stored holdings. */
   protected readonly dirty = computed(() =>
     this.assets.some((asset) => !this.equal(this.draft()[asset.id], this.profile.holdingFor(asset.id))),
@@ -71,27 +83,41 @@ export class ProfilePage {
 
   reset(): void {
     this.draft.set(this.seedDraft());
+    this.draftText.set(this.seedDraftText());
   }
 
   update(assetId: string, changes: Partial<Holding>): void {
     this.draft.update((draft) => ({ ...draft, [assetId]: { ...draft[assetId], ...changes } }));
   }
 
-  protected setAmount(assetId: string, amount: number | null): void {
-    this.update(assetId, { amount: amount ?? 0 });
+  protected setAmount(assetId: string, raw: string): void {
+    this.setNumeric(assetId, 'amount', raw);
   }
 
-  protected setEntryPrice(assetId: string, entryPrice: number | null): void {
-    this.update(assetId, { entryPrice: entryPrice ?? 0 });
+  protected setEntryPrice(assetId: string, raw: string): void {
+    this.setNumeric(assetId, 'entryPrice', raw);
   }
 
   protected setEntryCurrency(assetId: string, entryCurrency: Currency): void {
     this.update(assetId, { entryCurrency });
   }
 
+  /** Keeps the raw text and updates the parsed numeric draft in lockstep. */
+  private setNumeric(assetId: string, field: NumericField, raw: string): void {
+    this.draftText.update((text) => ({ ...text, [assetId]: { ...text[assetId], [field]: raw } }));
+    this.update(assetId, { [field]: this.parseNumber(raw) });
+  }
+
+  /** Parses user input, tolerating a comma or dot decimal separator. */
+  private parseNumber(raw: string): number {
+    const value = Number.parseFloat(raw.replace(',', '.').trim());
+    return Number.isFinite(value) ? value : 0;
+  }
+
   /** Re-seeds all editable state from the now-active profile. */
   private loadActive(): void {
     this.draft.set(this.seedDraft());
+    this.draftText.set(this.seedDraftText());
     this.renameValue.set(this.profile.active().name);
   }
 
@@ -99,6 +125,23 @@ export class ProfilePage {
     return Object.fromEntries(
       this.assets.map((asset) => [asset.id, { ...this.profile.holdingFor(asset.id) }]),
     );
+  }
+
+  private seedDraftText(): DraftTextMap {
+    return Object.fromEntries(
+      this.assets.map((asset) => {
+        const holding = this.profile.holdingFor(asset.id);
+        return [
+          asset.id,
+          { amount: this.numberToText(holding.amount), entryPrice: this.numberToText(holding.entryPrice) },
+        ];
+      }),
+    );
+  }
+
+  /** Shows a stored value, leaving the field empty for the unset zero default. */
+  private numberToText(value: number): string {
+    return value ? String(value) : '';
   }
 
   private equal(a: Holding, b: Holding): boolean {
